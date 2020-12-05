@@ -1,24 +1,33 @@
-import React from 'react'
 import logo from './logo.svg';
+import { Container } from 'react-bootstrap';
+import ItemList from './pages/ItemList.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
-import VolunteerSignup from "./scripts/VolunteerSignup";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 
-
-class App extends React.Component{
-        render() {
-            return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                <VolunteerSignup></VolunteerSignup>
-                </header>
-            </div>
-            );
-        }
+function App() {
+  return (
+    <Container
+      style={{
+        maxWidth: '576px',
+        height: '100vh',
+        margin: 'auto',
+      }}
+    >
+      <Router>
+        <Switch>
+          <Route exact path="/" render={() => null}></Route>
+          <Route exact path="/item-list" render={() => <ItemList />}></Route>
+        </Switch>
+      </Router>
+    </Container>
+  );
 }
 
 export default App;
