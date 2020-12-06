@@ -1,28 +1,28 @@
 import { Container } from 'react-bootstrap';
 import ItemList from './pages/ItemList.js';
-import VolunteerSignup from "./pages/VolunteerSignup";
-import AvailablityHealthStatus from "./pages/Availablity-HealthStatus";
-import VolunteerDashboard from "./pages/VolunteerDashboard";
+import VolunteerSignup from './pages/VolunteerSignup';
+import AvailablityHealthStatus from './pages/Availablity-HealthStatus';
+import VolunteerDashboard from './pages/VolunteerDashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
-import EditItems from "./pages/EditItems";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles/App.css";
+import EditItems from './pages/EditItems';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/App.css';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 function App() {
   return (
     <Container
       style={{
-        maxWidth: "576px",
-        height: "100vh",
-        margin: "auto",
+        maxWidth: '576px',
+        height: '100vh',
+        margin: 'auto',
       }}
     >
       <Router>

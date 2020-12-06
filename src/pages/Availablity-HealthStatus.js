@@ -1,7 +1,6 @@
 import '../styles/App.css';
 import Calendar from "../calendar/Calendar";
 import { useHistory } from 'react-router-dom';
-import { useState } from 'react';
 
 export default function AvailablityHealthStatus(){
     const history = useHistory();
