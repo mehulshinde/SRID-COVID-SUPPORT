@@ -83,13 +83,26 @@ h1 {
 
 h2 {
   /* position: absolute; */
-  width: 113px;
+  width: 350px;
   height: 23px;
 
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+}
+h3 {
+  /* position: absolute; */
+  width: 350px;
+  height: 23px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
   line-height: 23px;
 
   color: #000000;
@@ -145,6 +158,13 @@ p {
 
   /* background: #f6f6f6; */
   border-radius: 8px;
+}
+.calendar{
+  width: 500px;
+}
+
+.calendar_default_corner{
+  display: none !important;
 }
 
 .picture {
