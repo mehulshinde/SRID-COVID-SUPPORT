@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Form, Col, Button } from 'react-bootstrap';
-import Item from './Item';
+import { Form, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
 
-export default function EditItems() {
+export default function Subscription() {
   // const [itemName, setItemName] = useState('');
   // const [itemQty, setItemQty] = useState();
   // const [itemList, setItemList] = useState([]);
@@ -36,7 +35,7 @@ export default function EditItems() {
         ></i>
       </div>
       <div class="title">
-        <h1>Subscription Information</h1>
+        <h1>Subscription</h1>
       </div>
       <div class="body">
         <Form>
