@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import { Container } from 'react-bootstrap';
 import ItemList from './pages/ItemList.js';
 import VolunteerSignup from "./pages/VolunteerSignup";
+import AvailablityHealthStatus from "./pages/Availablity-HealthStatus";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
 
@@ -25,7 +26,8 @@ function App() {
         <Switch>
           <Route exact path="/" render={() => null}></Route>
           <Route exact path="/item-list" render={() => <ItemList />}></Route>
-            <Route exact path="/volunteer-signup" render={() => <VolunteerSignup />}></Route>
+          <Route exact path="/volunteer-signup" render={() => <VolunteerSignup />}></Route>
+          <Route exact path="/edit-volunteer-data" render={() => <AvailablityHealthStatus />}></Route>
         </Switch>
       </Router>
     </Container>

@@ -23,10 +23,12 @@ class VolunteerSignup extends React.Component{
     render() {
         return (
             <body>
-                <div className="background">
-                    <h1>Volunteer Sign-up</h1>
+                <div className="back">
                 </div>
-                <div className="background">
+                <div className="title">
+                    <h1>Volunteer Sign Up</h1>
+                </div>
+                <div className="body">
                     <form onSubmit={this.handleSubmit}>
                         <div>
                             First Name: <input type="text" name="firstname" className="input"/>
@@ -43,11 +45,10 @@ class VolunteerSignup extends React.Component{
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        <br/>
-                        <fieldset>
                         <div>
                             <h4>Medical Conditions(tick all that apply)</h4>
                         </div>
+                        <fieldset>
                         <div>
                             <input type="checkbox" id="bp" name="bp" className="input-checkbox"/>
                             <label htmlFor="bp">High Blood Pressure</label>
@@ -61,15 +62,15 @@ class VolunteerSignup extends React.Component{
                             <label htmlFor="diabetes">Diabetes</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="kidney" name="kidney" className="input-checkbox" value="true"/>
+                            <input type="checkbox" id="kidney" name="kidney" className="input-checkbox" />
                             <label htmlFor="kidney">Chronic Kidney Disease</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="copd" name="copd" className="input-checkbox" value="true"/>
+                            <input type="checkbox" id="copd" name="copd" className="input-checkbox"/>
                             <label htmlFor="copd">COPD</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="asthma" name="asthma" className="input-checkbox" value="true"/>
+                            <input type="checkbox" id="asthma" name="asthma" className="input-checkbox" />
                             <label htmlFor="asthma">Asthma</label>
                         </div>
                         </fieldset>
