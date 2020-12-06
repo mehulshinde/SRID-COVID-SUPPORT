@@ -1,0 +1,39 @@
+a{
+    width: 37px;
+    height: 10px;
+    text-decoration: underline !important;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    color: #434D65 !important;
+    display: block !important;
+}
+.back{
+    font-size: 30px !important;
+}
+.body-icons {
+    position: center;
+    width: 47px;
+    height: 49px;
+    font-size: 100px;
+    left: 17px;
+    top: 56px;
+    bottom: 56px;
+    border-radius: 10px;
+}
+
+p{
+    width: 350px !important;
+    margin-top: 20px !important;
+}
+
+.icon-torso{
+    vertical-align: middle !important;
+}
+
+.back{
+    text-align: center !important;
+    top: 50px !important;
+}

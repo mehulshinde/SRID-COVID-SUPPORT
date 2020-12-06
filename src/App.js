@@ -2,6 +2,7 @@ import { Container } from 'react-bootstrap';
 import ItemList from './pages/ItemList.js';
 import VolunteerSignup from "./pages/VolunteerSignup";
 import AvailablityHealthStatus from "./pages/Availablity-HealthStatus";
+import VolunteerDashboard from "./pages/VolunteerDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
 import EditItems from "./pages/EditItems";
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/item-list" render={() => <ItemList />}></Route>
           <Route exact path="/volunteer-signup" render={() => <VolunteerSignup />}></Route>
           <Route exact path="/edit-volunteer-data" render={() => <AvailablityHealthStatus />}></Route>
+          <Route exact path="/volunteer-dashboard" render={() => <VolunteerDashboard />}></Route>
           <Route
             exact
             path="/edit-item-list"

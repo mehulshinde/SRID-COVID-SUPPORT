@@ -1,7 +1,11 @@
 import '../styles/App.css';
 import Calendar from "../calendar/Calendar";
+import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function AvailablityHealthStatus(){
+    const history = useHistory();
+
     function handleSubmit(event) {
         if (event.target.elements.breathe.checked ||
             event.target.elements.fever.checked ||
@@ -11,22 +15,26 @@ export default function AvailablityHealthStatus(){
             event.target.elements.bodyaches.checked) {
             alert("Covid Symptoms.Not Eligible for Volunteering. Disable for 14 days")
             // TODO: Disable volunteer and Redirect to Dashboard
+            history.push('/volunteer-dashboard');
         } else {
             alert("Updated")
             // TODO: Redirect to Dashboard
+            history.push('/volunteer-dashboard');
         }
         event.preventDefault();
     }
 
         return (
             <>
-                <div className="library-fontello">
-                    <i
-                        className="icon-left-open back"
-                        // onClick={() => {
-                        //     history.push('/item-list');
-                        // }}
-                    ></i>
+                <div className="back">
+                    <div className="library-fontello">
+                        <i
+                            className="icon-left-open"
+                            onClick={() => {
+                                history.push('/volunteer-dashboard');
+                            }}
+                        ></i>
+                    </div>
                 </div>
                 <div className="title">
                     <h2>Availability and</h2>

@@ -1,8 +1,11 @@
 import '../styles/App.css';
 import '../styles/VolunteerSignup.css';
 import React from 'react';
+import {useHistory} from "react-router-dom";
 
 export default function VolunteerSignup(){
+    const history = useHistory();
+
     function handleSubmit(event) {
         if ((event.target.elements.age.value > 35) ||
             (event.target.elements.bp.checked ||
@@ -12,10 +15,10 @@ export default function VolunteerSignup(){
             event.target.elements.copd.checked ||
             event.target.elements.asthma.checked)) {
             alert("Not Eligible")
-            // TODO Redirect to home page
+            history.push('/');
         } else {
             alert("Eligible")
-            // TODO Redirect to Dashboard
+            history.push('/volunteer-dashboard');
         }
         event.preventDefault();
     }
@@ -25,9 +28,9 @@ export default function VolunteerSignup(){
                 <div className="library-fontello">
                     <i
                         className="icon-left-open back"
-                        // onClick={() => {
-                        //     history.push('/item-list');
-                        // }}
+                        onClick={() => {
+                            history.push('/');
+                        }}
                     ></i>
                 </div>
                 <div className="title">
