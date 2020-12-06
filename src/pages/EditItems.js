@@ -1,11 +1,13 @@
-import { useState } from "react";
-import { Form, Col, Button } from "react-bootstrap";
-import Item from "./Item";
+import { useState } from 'react';
+import { Form, Col, Button } from 'react-bootstrap';
+import Item from './Item';
+import { useHistory } from 'react-router-dom';
 
 export default function EditItems() {
-  const [itemName, setItemName] = useState("");
+  const [itemName, setItemName] = useState('');
   const [itemQty, setItemQty] = useState();
   const [itemList, setItemList] = useState([]);
+  const history = useHistory();
 
   function handleAddItem(e) {
     e.preventDefault();
@@ -20,7 +22,14 @@ export default function EditItems() {
 
   return (
     <>
-      <div class="back"></div>
+      <div class="library-fontello">
+        <i
+          class="icon-left-open back"
+          onClick={() => {
+            history.push('/item-list');
+          }}
+        ></i>
+      </div>
       <div class="title">
         <h1>Edit Items</h1>
       </div>

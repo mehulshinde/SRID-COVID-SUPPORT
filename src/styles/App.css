@@ -115,9 +115,10 @@ p {
   position: absolute;
   width: 47px;
   height: 49px;
+  font-size: 30px;
   left: 17px;
   top: 56px;
-  background: #f6f6f6;
+  /* background: #f6f6f6; */
   border-radius: 8px;
 }
 
@@ -130,8 +131,6 @@ p {
   top: 56px;
 
   /* Gray/01 */
-
-  background: #f6f6f6;
   border-radius: 8px;
 }
 
