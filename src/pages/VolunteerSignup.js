@@ -2,8 +2,8 @@ import '../styles/App.css';
 import '../styles/VolunteerSignup.css';
 import React from 'react';
 
-class VolunteerSignup extends React.Component{
-    handleSubmit(event) {
+export default function VolunteerSignup(){
+    function handleSubmit(event) {
         if ((event.target.elements.age.value > 35) ||
             (event.target.elements.bp.checked ||
             event.target.elements.heart.checked ||
@@ -20,16 +20,21 @@ class VolunteerSignup extends React.Component{
         event.preventDefault();
     }
 
-    render() {
         return (
-            <body>
-                <div className="back">
+            <>
+                <div className="library-fontello">
+                    <i
+                        className="icon-left-open back"
+                        // onClick={() => {
+                        //     history.push('/item-list');
+                        // }}
+                    ></i>
                 </div>
                 <div className="title">
-                    <h1>Volunteer Sign Up</h1>
+                    <h2>Volunteer Sign Up</h2>
                 </div>
                 <div className="body">
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <div>
                             First Name: <input type="text" name="firstname" className="input"/>
                         </div>
@@ -45,9 +50,12 @@ class VolunteerSignup extends React.Component{
                                 <option value="other">Other</option>
                             </select>
                         </div>
+                        <br/>
                         <div>
-                            <h4>Medical Conditions(tick all that apply)</h4>
+                            <h3>Medical Conditions</h3>
+                            <h3>(tick all that apply)</h3>
                         </div>
+                        <br/>
                         <fieldset>
                         <div>
                             <input type="checkbox" id="bp" name="bp" className="input-checkbox"/>
@@ -84,12 +92,11 @@ class VolunteerSignup extends React.Component{
                             </div>
                         </div>
                         <br/>
-                        <input type="submit" className="btn-primary btn" value="Sign Up"></input>
+                        <div align="center">
+                            <input type="submit" className="btn-primary btn" value="Sign Up" id="submit"></input>
+                        </div>
                     </form>
                 </div>
-            </body>
+            </>
         );
-    }
 }
-
-export default VolunteerSignup;

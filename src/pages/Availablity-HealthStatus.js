@@ -1,9 +1,8 @@
 import '../styles/App.css';
-import '../styles/VolunteerSignup.css';
-import React from 'react';
+import Calendar from "../calendar/Calendar";
 
-class AvailablityHealthStatus extends React.Component{
-    handleSubmit(event) {
+export default function AvailablityHealthStatus(){
+    function handleSubmit(event) {
         if (event.target.elements.breathe.checked ||
             event.target.elements.fever.checked ||
             event.target.elements.cold.checked ||
@@ -19,20 +18,30 @@ class AvailablityHealthStatus extends React.Component{
         event.preventDefault();
     }
 
-    render() {
         return (
-            <body>
-                <div className="background">
-                    <h1>Availability and Health Status</h1>
-                    <br/>
+            <>
+                <div className="library-fontello">
+                    <i
+                        className="icon-left-open back"
+                        // onClick={() => {
+                        //     history.push('/item-list');
+                        // }}
+                    ></i>
+                </div>
+                <div className="title">
+                    <h2>Availability and</h2>
+                    <h2>Health Status</h2>
                 </div>
 
-                <div className="background">
-                    <form onSubmit={this.handleSubmit}>
-                        <fieldset>
+                <div className="body">
+                    <form onSubmit={handleSubmit}>
+                            <br/>
                         <div>
-                            <h4>Current Health Conditions(tick all that apply)</h4>
+                            <h3>Current Health Conditions</h3>
+                            <h3>(tick all that apply)</h3>
                         </div>
+                        <br/>
+                        <fieldset>
                         <div>
                             <input type="checkbox" id="breathe" name="breathe" className="input-checkbox"/>
                             <label htmlFor="breathe">Breathing Issues</label>
@@ -60,15 +69,18 @@ class AvailablityHealthStatus extends React.Component{
                         </fieldset>
                         <br/>
                         <div>
-                            <h4>Availability</h4>
+                            <h3>Availability</h3>
                         </div>
                         <br/>
-                        <input type="submit" className="btn-primary btn" value="Update"></input>
+                        <div className="calendar">
+                            <Calendar/>
+                        </div>
+                        <br/>
+                        <div align="center">
+                            <input type="submit" className="btn-primary btn" value="Update"></input>
+                        </div>
                     </form>
                 </div>
-            </body>
+            </>
         );
-    }
 }
-
-export default AvailablityHealthStatus;
