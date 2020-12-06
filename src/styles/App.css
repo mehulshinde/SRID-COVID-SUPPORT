@@ -36,3 +36,175 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  background-color: #14203e !important;
+  border-radius: 26px !important;
+  border: 2px solid #14203e !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+  font-family: Roboto !important;
+  font-size: 20px;
+  font-weight: bold !important;
+  padding: 10px 25px;
+  text-decoration: none !important;
+  text-shadow: 0px 1px 0px #14203e !important;
+}
+
+button:active {
+  background-color: #434d65 !important;
+  border-radius: 26px !important;
+  border: 2px solid #14203e !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+  font-family: Roboto !important;
+  /* font-size: 20px; */
+  font-weight: bold !important;
+  /* padding: 10px 25px; */
+  text-decoration: none !important;
+  text-shadow: 0px 1px 0px #14203e !important;
+}
+
+h1 {
+  /* position: absolute; */
+  width: 170px;
+  height: 35px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #000000;
+}
+
+h2 {
+  /* position: absolute; */
+  width: 113px;
+  height: 23px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+}
+
+p {
+  /* position: absolute; */
+  width: 37px;
+  height: 19px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.back {
+  /* display: flex; */
+  position: absolute;
+  width: 47px;
+  height: 49px;
+  left: 17px;
+  top: 56px;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+.title {
+  /* display: flex; */
+  position: absolute;
+  width: 281px;
+  height: 49px;
+  left: 78px;
+  top: 56px;
+
+  /* Gray/01 */
+
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+.body {
+  position: absolute;
+  width: 343px;
+  height: 654px;
+  left: 17px;
+  top: 117px;
+
+  /* Gray/01 */
+
+  /* background: #f6f6f6; */
+  border-radius: 8px;
+}
+
+.picture {
+  width: 60px;
+  height: 60px;
+
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+.item-name {
+  width: 283px;
+  height: 29px;
+  margin-left: 10px;
+
+  /* background: #f6f6f6; */
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.quantity {
+  width: 251px;
+  height: 22px;
+  margin-left: 10px;
+  margin-top: 0px;
+
+  /* background: #f6f6f6; */
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.action {
+  width: 21px;
+  height: 22px;
+  margin-left: 10px;
+  margin-top: 0px;
+
+  background: #f6f6f6;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.item {
+  display: flex;
+  padding-top: 10px;
+  border-bottom: 2px solid #72798b;
+  /* -webkit-tap-highlight-color: #72798b; */
+  /* border-bottom: #14203e; */
+}
+
+.item:hover,
+.item:active {
+  display: flex;
+  padding-top: 10px;
+  border-bottom: 2px solid #72798b;
+  /* border-bottom: #14203e; */
+  background: #f6f6f6;
+}
+
+.subtext {
+  display: flex;
+}
