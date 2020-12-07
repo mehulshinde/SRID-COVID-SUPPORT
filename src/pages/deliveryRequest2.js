@@ -1,7 +1,8 @@
 import '../styles/App.css';
 
-
+import { useHistory } from 'react-router-dom';
 export default function deliveryRequest(){
+    const history = useHistory();
     function handleSubmit(event) {
      
             if (!event.target.elements.milk_available.checked ||
@@ -16,8 +17,7 @@ export default function deliveryRequest(){
                 history.push('/viewRequests2');
             }
             event.preventDefault();
-        }
-        event.preventDefault();
+        
     }
 
         return (

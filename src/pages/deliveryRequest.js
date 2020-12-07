@@ -1,5 +1,5 @@
 import '../styles/App.css';
-
+import { useHistory } from 'react-router-dom';
 
 export default function deliveryRequest(){
     function handleSubmit(event) {
@@ -12,9 +12,7 @@ export default function deliveryRequest(){
                 <div className="library-fontello">
                     <i
                         className="icon-left-open back"
-                        // onClick={() => {
-                        //     history.push('/item-list');
-                        // }}
+                        
                     ></i>
                 </div>
                 <div className="title">
@@ -77,23 +75,7 @@ export default function deliveryRequest(){
                         </div>
                         </div>
                         
-                        <table>
-                        <thead>
-                            <tr> 
-                                
-                                <th><div className="library-fontello">
-                        <i class="icon-phone"></i> Status </div></th> 
-                        <th><div className="library-fontello">
-                        <i class="icon-phone"></i> Status </div></th> 
-                        <th><div className="library-fontello">
-                        <i class="icon-ok"></i> Status </div></th> 
-                                
-                              </tr>
-                            </thead>
-                           
-
-
-                    </table>
+                       
                 </div>
             </>
         );

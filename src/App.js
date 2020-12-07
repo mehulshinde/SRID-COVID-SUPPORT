@@ -10,12 +10,8 @@ import VolunteerDashboard from "./pages/VolunteerDashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 import EditItems from "./pages/EditItems";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles/App.css";
-import { Container } from 'react-bootstrap';
-import ItemList from './pages/ItemList.js';
-import VolunteerSignup from './pages/VolunteerSignup';
-import AvailabilityHealthStatus from './pages/Availablity-HealthStatus';
+
+
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 
@@ -23,8 +19,7 @@ import ViewRequests from "./pages/viewRequests";
 import ViewRequests2 from "./pages/viewRequests2";
 import DeliveryRequest2 from "./pages/deliveryRequest2";
 import DeliveryRequest from "./pages/deliveryRequest"
-import VolunteerDashboard from './pages/VolunteerDashboard';
-import EditItems from './pages/EditItems';
+
 import Subscription from "./pages/Subscription";
 import Home from "./pages/Home";
 import NewRequestForm from "./pages/NewRequestForm";
