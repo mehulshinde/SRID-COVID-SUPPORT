@@ -1,7 +1,7 @@
 import "../styles/App.css";
 import Calendar from "../calendar/calendar2";
 
-export default function ViewRequests() {
+export default function ViewRequests2() {
   function handleSubmit(event) {
     event.preventDefault();
   }

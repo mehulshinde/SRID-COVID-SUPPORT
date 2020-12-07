@@ -4,6 +4,7 @@ import Calendar from "../calendar/calendar2";
 
 export default function ViewRequests() {
   const history = useHistory();
+
   function handleSubmit(event) {
     event.preventDefault();
   }
