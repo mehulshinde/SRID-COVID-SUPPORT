@@ -53,7 +53,7 @@ export default function VolunteerSignup() {
             <input
               type="number"
               name="age"
-              maxlength="3"
+              maxLength="3"
               min="0"
               className="input-age"
               required={true}
