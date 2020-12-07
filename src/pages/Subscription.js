@@ -12,12 +12,15 @@ export default function Subscription() {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zipCode, setZipCode] = useState();
+  const [frequency, setFrequency] = useState('');
+
 
   const history = useHistory();
 
   function handleAddItem(e) {
     e.preventDefault();
-    console.log(e);
+    //console.log(startDate + streetAddress + city + state + zipCode + frequency);
+    alert('Subscription successful! Your items will be delivered by');
   }
 
   function Subscription(e) {
@@ -76,7 +79,9 @@ export default function Subscription() {
           </Form.Group>
           <Form.Group>
             <Form.Label>Delivery Frequency</Form.Label>
-            <Form.Control as="select">
+            <Form.Control as="select"
+            value={frequency}
+            onChange={(e) => setFrequency(e.target.value)}>
               <option>Weekly</option>
               <option>Bi-Weekly</option>
               <option>Monthly</option>
