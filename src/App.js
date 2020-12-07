@@ -11,8 +11,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 import EditItems from "./pages/EditItems";
 
-import Login from "./pages/login";
-import Signup from "./pages/signup";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 import EditItem from "./pages/EditItem";
@@ -50,7 +50,7 @@ function App() {
     >
       <Router>
         <Switch>
-          <Route exact path="/" render={() => <div>HOME</div>}></Route>
+          <Route exact path="/" render={() => <Login />}></Route>
           <Route
             exact
             path="/item-list"

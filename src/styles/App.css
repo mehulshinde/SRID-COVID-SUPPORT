@@ -1,9 +1,11 @@
 html {
   background: #d5d5d8;
+  background-image: url("../logo_light.png");
 }
 
 .container {
   background: #d5d5d8;
+  background-image: url("../logo_light.png");
 }
 
 button {
