@@ -1,7 +1,20 @@
 import "../styles/App.css";
+import Item from "./Item";
 import { useHistory } from "react-router-dom";
-
+import { requestFor } from "./ViewRequests";
 export default function DeliveryRequest() {
+  const history = useHistory();
+  const itemList = [
+    { itemName: "Organic Milk", itemQty: 1 },
+    { itemName: "Yogurt", itemQty: 1 },
+  ];
+
+  const sentMsg = [
+    requestFor +
+      ",I am about to get you your groceries for this week, you specified you need: Organic Milk - 1 gallon Yoghurt - 1 Do you want anything changed?",
+  ];
+
+  const chat = { title: "Mary's Request", sent: sentMsg, received: [] };
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -9,15 +22,24 @@ export default function DeliveryRequest() {
   return (
     <>
       <div className="library-fontello">
-        <i className="icon-left-open back"></i>
+        <i
+          className="icon-left-open back"
+          onClick={() => {
+            history.push("/view-volunteer-requests");
+          }}
+        ></i>
       </div>
       <div className="title">
-        <h2> Mary's Request</h2>
-        <h3>07 Dec 2020 6 PM</h3>
+        <h2> {requestFor}'s Request</h2>
+        <p>07 Dec 2020 6 PM</p>
       </div>
-
       <div className="body">
-        <div class="table">
+        {itemList.map((item) => (
+          <div>
+            <Item item={item}></Item>
+          </div>
+        ))}
+        {/* <div class="table">
           <div>
             <h2>Items List</h2>
 
@@ -26,52 +48,30 @@ export default function DeliveryRequest() {
                 <tr>
                   <th>Item</th>
                   <th>Quantity</th>
-                  <th>Available</th>
-                </tr>
-              </thead>
-
-              <tr>
-                <td>Organic Milk</td>
-                <td>1 Gallon</td>
-                <td>
-                  <div>
-                    <input
-                      type="checkbox"
-                      id="milk_available"
-                      name="milk"
-                      className="input-checkbox"
-                    />
-                  </div>{" "}
-                </td>
               </tr>
 
               <tr>
                 <td>Organic Yoghurt</td>
                 <td>1 Lbs</td>
-                <td>
-                  <div>
-                    <input
-                      type="checkbox"
-                      id="yoghurt_available"
-                      name="yoghurt"
-                      className="input-checkbox"
-                    />
-                  </div>{" "}
-                </td>
               </tr>
             </table>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
-        <div align="center">
-          <div align="center">
-            <input
-              type="submit"
-              className="btn-primary btn"
-              value="Process Delivery"
-              id="submit"
-            ></input>
-          </div>
+        <div class="proceed-button" align="center">
+          {/* <input
+            type="submit"
+            className="btn-primary btn"
+            value="Process Delivery"
+            id="submit"
+          ></input> */}
+          <button
+            onClick={() => {
+              history.push({ pathname: "/chat", state: chat });
+            }}
+          >
+            Process Delivery
+          </button>
         </div>
       </div>
     </>

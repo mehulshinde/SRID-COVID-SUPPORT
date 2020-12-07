@@ -22,7 +22,7 @@ export default function Item(item) {
           <h2 class="item-name">{item.item.itemName}</h2>
           <div class="subtext">
             <p class="quantity">{item.item.itemQty}</p>
-            <div class="action"></div>
+            {/* <div class="action"></div> */}
           </div>
         </div>
       </div>
