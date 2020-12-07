@@ -4,7 +4,18 @@ import { Link, useHistory } from 'react-router-dom';
 
 export default function NewRequestForm() {
   const history = useHistory();
+  function handleFindVolunteer(e) {
+    e.preventDefault();
+    //console.log(startDate + streetAddress + city + state + zipCode + frequency);
+    alert('We are matching nearby available volunteers for you. We will notify you when we find one!');
+    window.location = '/user-home?from=test';
+    // setTimeout(() => {
+    //   alert('Volunteers have been matched for your pending request');
+    // }, 3000);
+    // window.location='/new-request/volunteer-selection';
 
+
+  }
   return (
     <>
       <Row>
@@ -78,9 +89,9 @@ export default function NewRequestForm() {
             </Col>
           </Form.Row>
         </Form.Group>
-        <Link to="/new-request/volunteer-selection">
-          <Button type="submit">Find Volunteer</Button>
-        </Link>
+        <Button type="submit" onClick={handleFindVolunteer}>
+          Find Volunteer
+        </Button>
       </Form>
     </>
   );

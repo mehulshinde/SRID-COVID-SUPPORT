@@ -33,6 +33,8 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const [requests,  setRequests] = useState([]);
+
   return (
     <Container
       style={{
@@ -55,7 +57,7 @@ function App() {
             path="/subscribe"
             render={() => <Subscription />}
           ></Route>
-          <Route exact path="/user-home" render={() => <Home />}></Route>
+          <Route exact path="/user-home" render={() => <Home requests={requests}/>}></Route>
           <Route
             exact
             path="/new-request/form"

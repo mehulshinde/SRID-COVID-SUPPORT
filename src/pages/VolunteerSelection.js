@@ -22,6 +22,15 @@ export default function VolunteerSelection() {
 	}
 
 
+  function setVolunteer(e) {
+    e.preventDefault();
+    //console.log(startDate + streetAddress + city + state + zipCode + frequency);
+    alert('Your on-demand request has been submitted');
+    window.location = '/user-home';
+
+  }
+
+
   return (
     <>
       <h2 className="mt-4">Volunteer Selection</h2>
@@ -41,9 +50,9 @@ export default function VolunteerSelection() {
             </div>
           );
         })}
-				<Link to="/user-home">
-      <Button>Request</Button>
-			</Link>
+        <Button type="submit" onClick={setVolunteer}>
+          Request
+        </Button>
     </>
   );
 

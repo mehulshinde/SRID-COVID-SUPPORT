@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Form, Col, Button, Table } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
@@ -6,6 +6,15 @@ import { useHistory } from 'react-router-dom';
 
 export default function Home() {
   const history = useHistory();
+  const from = new URLSearchParams(window.location.search).get('from');
+
+
+  useEffect(() => {
+    if (from === 'test') {
+    setTimeout(() => {
+    alert('Volunteers have been matched for your pending request');
+    window.location='/new-request/volunteer-selection';
+  }, 3000)}}, [])
 
   function onDemand(e) {
     e.preventDefault();
