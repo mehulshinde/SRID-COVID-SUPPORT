@@ -22,7 +22,8 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewType: "Week",
+      viewType: "Days",
+      days: 5,
       durationBarVisible: false,
       timeRangeSelectedHandling: "Enabled",
       onTimeRangeSelected: (args) => {

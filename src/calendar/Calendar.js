@@ -2,20 +2,16 @@ import React, { Component } from "react";
 import {
   DayPilot,
   DayPilotCalendar,
-  DayPilotNavigator,
 } from "daypilot-pro-react";
 import "./CalendarStyles.css";
 
 const styles = {
-  wrap: {
-    display: "flex",
-  },
   left: {
     marginRight: "10px",
   },
-  main: {
-    flexGrow: "1",
-  },
+  // main: {
+  //   flexGrow: "1",
+  // },
 };
 const eventList = [
   {
@@ -28,15 +24,15 @@ const eventList = [
   {
     id: 2,
     text: "Available",
-    start: "2020-12-10T17:30:00",
-    end: "2020-12-10T19:30:00",
+    start: "2020-12-07T17:30:00",
+    end: "2020-12-07T19:30:00",
     backColor: "#AA767C",
   },
   {
     id: 3,
     text: "Available",
-    start: "2020-12-12T16:00:00",
-    end: "2020-12-12T19:00:00",
+    start: "2020-12-09T16:00:00",
+    end: "2020-12-09T19:00:00",
     backColor: "#AA767C",
   },
 ];
@@ -44,7 +40,8 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewType: "Week",
+      viewType: "Days",
+      days: 5,
       durationBarVisible: false,
       timeRangeSelectedHandling: "Enabled",
       onTimeRangeSelected: (args) => {
@@ -86,7 +83,7 @@ class Calendar extends Component {
     // load event data
     this.setState({
       startDate: "2020-12-06",
-      events: eventList,
+      events: eventList
     });
   }
 

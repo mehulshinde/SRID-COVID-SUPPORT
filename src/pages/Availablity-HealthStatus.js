@@ -18,11 +18,9 @@ export default function AvailablityHealthStatus() {
       alert(
         "Covid Symptoms.Not Eligible for Volunteering. Disable for 14 days"
       );
-      // TODO: Disable volunteer and Redirect to Dashboard
       history.push("/volunteer-dashboard");
     } else {
       alert("Updated");
-      // TODO: Redirect to Dashboard
       history.push("/volunteer-dashboard");
     }
     event.preventDefault();
