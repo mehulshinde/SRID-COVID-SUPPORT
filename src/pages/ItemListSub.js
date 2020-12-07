@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-export default function ItemList() {
+export default function ItemListSub() {
   const [itemName, setItemName] = useState('');
   const [itemQty, setItemQty] = useState();
   const [itemList, setItemList] = useState([]);
@@ -60,7 +60,7 @@ export default function ItemList() {
           <Button variant="secondary">Cancel</Button>
         </Col>
         <Col>
-          <Link to="/new-request/form">
+          <Link to="/subscribe">
             <Button>Continue</Button>
           </Link>
         </Col>

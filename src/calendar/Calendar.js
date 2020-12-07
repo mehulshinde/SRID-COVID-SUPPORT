@@ -13,7 +13,29 @@ const styles = {
     flexGrow: "1"
   }
 };
-
+const eventList = [
+  {
+    id: 1,
+    text: "Available",
+    start: "2020-12-06T10:30:00",
+    end: "2020-12-06T13:00:00",
+    backColor: "#AA767C"
+  },
+  {
+    id: 2,
+    text: "Available",
+    start: "2020-12-10T17:30:00",
+    end: "2020-12-10T19:30:00",
+    backColor: "#AA767C"
+  },
+  {
+    id: 3,
+    text: "Available",
+    start: "2020-12-12T16:00:00",
+    end: "2020-12-12T19:00:00",
+    backColor: "#AA767C"
+  },
+]
 class Calendar extends Component {
 
   constructor(props) {
@@ -27,13 +49,14 @@ class Calendar extends Component {
         DayPilot.Modal.prompt("Create a new event:", "Available").then(function(modal) {
           dp.clearSelection();
           if (!modal.result) { return; }
-          dp.events.add(new DayPilot.Event({
-            start: args.start,
-            end: args.end,
+          let eventDesc = {
             id: DayPilot.guid(),
             text: modal.result,
+            start: args.start,
+            end: args.end,
             backColor: "#AA767C"
-          }));
+          }
+          dp.events.add(new DayPilot.Event(eventDesc));
         });
       },
       eventDeleteHandling: "Update",
@@ -53,29 +76,7 @@ class Calendar extends Component {
     // load event data
     this.setState({
       startDate: "2020-12-06",
-      events: [
-        {
-          id: 1,
-          text: "Available",
-          start: "2020-12-06T10:30:00",
-          end: "2020-12-06T13:00:00",
-          backColor: "#AA767C"
-        },
-        {
-          id: 2,
-          text: "Available",
-          start: "2020-12-10T17:30:00",
-          end: "2020-12-10T19:30:00",
-          backColor: "#AA767C"
-        },
-        {
-          id: 2,
-          text: "Available",
-          start: "2020-12-12T16:00:00",
-          end: "2020-12-12T19:00:00",
-          backColor: "#AA767C"
-        },
-      ]
+      events: eventList
     });
   }
 
