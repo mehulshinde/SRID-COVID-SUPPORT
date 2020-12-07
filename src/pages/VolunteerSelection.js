@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export default function VolunteerSelection() {
+export default function VolunteerSelection(props) {
   const [volunteers, setVolunteers] = useState();
   const [selected, setSelected] = useState();
 
@@ -19,17 +19,24 @@ export default function VolunteerSelection() {
     const target = e.target;
     // console.log(e.target.textContent);
     setSelected(target.textContent);
-	}
-
+  }
 
   function setVolunteer(e) {
     e.preventDefault();
     //console.log(startDate + streetAddress + city + state + zipCode + frequency);
+    props.setRequests(
+      props.requests.map((request, ind) => {
+        if (ind === props.requests.length - 1) {
+          return { ...request, volunteer: selected };
+        } else {
+          return request;
+        }
+      })
+    );
+
     alert('Your on-demand request has been submitted');
-    window.location = '/user-home';
-
+    props.history.push('/user-home');
   }
-
 
   return (
     <>
@@ -50,10 +57,9 @@ export default function VolunteerSelection() {
             </div>
           );
         })}
-        <Button type="submit" onClick={setVolunteer}>
-          Request
-        </Button>
+      <Button type="submit" onClick={setVolunteer}>
+        Request
+      </Button>
     </>
   );
-
 }
