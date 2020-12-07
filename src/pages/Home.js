@@ -7,7 +7,8 @@ import { useHistory } from 'react-router-dom';
 export default function Home() {
   function onDemand(e) {
     e.preventDefault();
-    console.log('The link was clicked.');
+    // console.log('The link was clicked.');
+    window.location.href = "/item-list";
 
   }
   function subscribe(e) {

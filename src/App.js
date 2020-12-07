@@ -16,6 +16,10 @@ import './styles/App.css';
 import Subscription from "./pages/Subscription";
 import Home from "./pages/Home";
 
+import NewRequestForm from  "./pages/NewRequestForm";
+import VolunteerSelection from  "./pages/VolunteerSelection";
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -38,6 +42,8 @@ function App() {
           <Route exact path="/item-list" render={() => <ItemList />}></Route>
           <Route exact path="/subscribe" render={() => <Subscription />}></Route>
           <Route exact path="/user-home" render={() => <Home />}></Route>
+          <Route  exact  path="/new-request/form"  render={() => <NewRequestForm />} ></Route> 
+          <Route  exact  path="/new-request/volunteer-selection"  render={() => <VolunteerSelection />} ></Route>
 
           <Route
             exact
@@ -49,6 +55,7 @@ function App() {
             path="/edit-volunteer-data"
             render={() => <AvailabilityHealthStatus />}
           ></Route>
+          <Route exact path="/volunteer-dashboard" render={() => <VolunteerDashboard />}></Route>
           <Route
             exact
             path="/edit-item-list"

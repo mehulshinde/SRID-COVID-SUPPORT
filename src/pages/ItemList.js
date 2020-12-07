@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Form, Col, Button } from 'react-bootstrap';
+import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function ItemList() {
   const [itemName, setItemName] = useState('');
@@ -10,10 +11,12 @@ export default function ItemList() {
     e.preventDefault();
     console.log(e.target);
     setItemList([...itemList, { name: itemName, qty: itemQty }]);
+    setItemName('');
+    setItemQty('');
   }
   return (
     <>
-      <h3>Item List</h3>
+      <h2 className="mt-4">Item List</h2>
       <Form>
         <Form.Row>
           <Col xs="7">
@@ -41,12 +44,27 @@ export default function ItemList() {
           </Col>
         </Form.Row>
       </Form>
-      {itemList.map((item) => (
-        <>
-          <div>{item.name}</div>
-          <div>{item.qty}</div>
-        </>
-      ))}
+      {itemList.length === 0 ? (
+        <div>Add items to your list</div>
+      ) : (
+        itemList.map((item) => (
+          <Row className="justify-content-around">
+            <span>{item.name}</span>
+            <span>{item.qty}</span>
+            <span>Remove</span>
+          </Row>
+        ))
+      )}
+      <Row className="justify-content-between align-content-center">
+        <Col>
+          <Button variant="secondary">Cancel</Button>
+        </Col>
+        <Col>
+          <Link to="/new-request/form">
+            <Button>Continue</Button>
+          </Link>
+        </Col>
+      </Row>
     </>
   );
 }
