@@ -37,3 +37,23 @@ p{
     text-align: center !important;
     top: 50px !important;
 }
+
+#main    {
+ 
+    border: 1px solid red;
+    width: 280px;
+    margin: 50px auto;
+    }
+  
+    div.ex1 {
+      width: 200px;
+      position: relative;
+      height:100px;
+      
+    }
+    div.table {
+      width: 100%;
+      
+      
+    }
+    
