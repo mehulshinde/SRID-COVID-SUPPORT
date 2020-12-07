@@ -14,7 +14,6 @@ export default function DeliveryRequest2() {
   //   if (editedItems.length == 0) initialItems = itemList;
   //   else initialItems = editedItems;
   initialItems = editedItems.length == 0 ? itemList : editedItems;
-
   function handleSubmit(event) {
     if (
       !event.target.elements.milk_available.checked ||

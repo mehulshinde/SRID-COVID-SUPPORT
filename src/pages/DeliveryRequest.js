@@ -47,12 +47,6 @@ export default function DeliveryRequest() {
                 <tr>
                   <th>Item</th>
                   <th>Quantity</th>
-                </tr>
-              </thead>
-
-              <tr>
-                <td>Organic Milk</td>
-                <td>1 Gallon</td>
               </tr>
 
               <tr>

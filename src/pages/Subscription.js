@@ -1,31 +1,38 @@
-import { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
+import { useState } from "react";
+import { Form, Button, Row, Col } from "react-bootstrap";
+import { Link, useHistory } from "react-router-dom";
 
+export default function Subscription(props) {
 
-
-export default function Subscription() {
-  // const [itemName, setItemName] = useState('');
-  // const [itemQty, setItemQty] = useState();
-  // const [itemList, setItemList] = useState([]);
-  const [startDate, setStartDate] = useState(new Date());
-  const [streetAddress, setStreetAddress] = useState('');
-  const [city, setCity] = useState('');
-  const [state, setState] = useState('');
+  const [streetAddress, setStreetAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState();
-  const [frequency, setFrequency] = useState('');
+  const [frequency, setFrequency] = useState("");
 
-
+  console.log(props);
+  const { itemList } = props.location.state;
+  const [deliveryDate, setDeliveryDate] = useState();
   const history = useHistory();
 
-  function handleAddItem(e) {
+  function handleFindVolunteer(e) {
     e.preventDefault();
-    //console.log(startDate + streetAddress + city + state + zipCode + frequency);
-    alert('Subscription successful! Your items will be delivered by');
-  }
 
-  function Subscription(e) {
-    console.log(e);
+    console.log(props);
+    props.setRequests([
+      ...props.requests,
+      {
+        type: "Subscription - " + frequency,
+        date: deliveryDate,
+        itemList,
+        volunteer: "pending",
+      },
+    ]);
+    console.log(props.requests);
+    alert(
+      "We are matching nearby available volunteers for you. We will notify you when we find one!"
+    );
+    history.push("/user-home?from=test");
   }
 
   return (
@@ -34,7 +41,7 @@ export default function Subscription() {
         <i
           class="icon-left-open back"
           onClick={() => {
-            history.push('/subscription-item-list');
+            history.push("/subscription-item-list");
           }}
         ></i>
       </div>
@@ -43,10 +50,16 @@ export default function Subscription() {
       </div>
       <div class="body">
         <Form>
-          <Form.Group controlId="dob">
-            <Form.Label>Next Delivery Date</Form.Label>
-            <Form.Control type="date" name="dob" placeholder="Date of Birth" />
-          </Form.Group>
+        <Form.Group>
+          <Form.Label>Delivery Date</Form.Label>
+          <Form.Control
+            type="date"
+            value={deliveryDate}
+            onChange={(e) => {
+              setDeliveryDate(e.target.value);
+            }}
+          />
+        </Form.Group>
           <Form.Group>
             <Form.Label>Shipping Address</Form.Label>
             <Form.Control
@@ -80,17 +93,20 @@ export default function Subscription() {
           </Form.Group>
           <Form.Group>
             <Form.Label>Delivery Frequency</Form.Label>
-            <Form.Control as="select"
-            value={frequency}
-            onChange={(e) => setFrequency(e.target.value)}>
+            <Form.Control
+              as="select"
+              value={frequency}
+              onChange={(e) => setFrequency(e.target.value)}
+            >
+              <option>Select One</option>
               <option>Weekly</option>
               <option>Bi-Weekly</option>
               <option>Monthly</option>
             </Form.Control>
           </Form.Group>
-          <Link to="/new-request/volunteer-selection">
-            <Button type="submit">Find Volunteer</Button>
-          </Link>
+          <Button type="submit" onClick={handleFindVolunteer}>
+            Find Volunteer
+          </Button>
         </Form>
       </div>
     </>
