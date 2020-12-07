@@ -258,3 +258,7 @@ div.table {
 .edit-item-button {
   padding: 5px;
 }
+
+.sub {
+  font-size: 20px !important;
+}
