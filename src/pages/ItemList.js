@@ -57,7 +57,9 @@ export default function ItemList() {
       )}
       <Row className="justify-content-between align-content-center">
         <Col>
-          <Button variant="secondary">Cancel</Button>
+          <Link to="/user-home">
+            <Button variant="secondary">Cancel</Button>
+          </Link>
         </Col>
         <Col>
           <Link to="/new-request/form">
