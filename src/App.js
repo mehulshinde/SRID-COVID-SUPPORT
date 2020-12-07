@@ -65,12 +65,24 @@ function App() {
           <Route
             exact
             path="/subscription-item-list"
-            render={() => <ItemListSub />}
+            render={(props) => (
+              <ItemListSub
+                {...props}
+                requests={requests}
+                setRequests={setRequests}
+              />
+            )}
           ></Route>
           <Route
             exact
             path="/subscribe"
-            render={() => <Subscription />}
+            render={(props) => (
+              <Subscription
+                {...props}
+                requests={requests}
+                setRequests={setRequests}
+              />
+            )}
           ></Route>
           <Route
             exact
