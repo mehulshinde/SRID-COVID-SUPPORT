@@ -2,6 +2,7 @@ import "../styles/App.css";
 import "../styles/VolunteerSignup.css";
 import React from "react";
 import {useHistory} from "react-router-dom";
+import {disableVolunteerFlag} from "./Availablity-HealthStatus";
 
 export default function Login() {
   const history = useHistory();
@@ -15,7 +16,11 @@ export default function Login() {
         event.target.elements.usertyp.value === "Volunteer") {
       alert("Login Successful: Welcome Caleb!")
       history.push("/volunteer-dashboard");
-    } else{
+    } else if (event.target.elements.username.value === "John" &&
+      event.target.elements.usertyp.value === "Volunteer" && disableVolunteerFlag) {
+      alert("Covid Symptoms were logged by you in last 14 days. Volunteer Account disabled. Take Care :)")
+      window.location.reload(true);
+  } else{
       window.location.reload(true);
     }
     event.preventDefault();

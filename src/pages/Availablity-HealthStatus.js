@@ -3,6 +3,7 @@ import "../styles/Availablity-HealthStatus.css"
 import Calendar from "../calendar/Calendar";
 import { useHistory } from "react-router-dom";
 
+export let disableVolunteerFlag = false;
 export default function AvailablityHealthStatus() {
   const history = useHistory();
 
@@ -16,11 +17,12 @@ export default function AvailablityHealthStatus() {
       event.target.elements.bodyaches.checked
     ) {
       alert(
-        "Covid Symptoms.Not Eligible for Volunteering. Disable for 14 days"
+        "Covid Symptoms observed.You are not Eligible for Volunteering. Account Disable for 14 days"
       );
-      history.push("/volunteer-dashboard");
+      history.push("/login");
+      disableVolunteerFlag = true;
     } else {
-      alert("Updated");
+      alert("Data Updated");
       history.push("/volunteer-dashboard");
     }
     event.preventDefault();
