@@ -24,14 +24,12 @@ export default function DeliveryRequest2() {
       alert(
         "You have not checked all the items. Are you sure you want to mark the Request as Done?"
       );
-      // TODO: Disable volunteer and Redirect to Dashboard
       history.push("/view-volunteer-requests");
     } else if (
       event.target.elements.milk_available.checked &&
       event.target.elements.yoghurt_available.checked
     ) {
       alert(" Are you sure you want to mark the Request as Done?");
-      // TODO: Disable volunteer and Redirect to Dashboard
       history.push("/view-volunteer-requests");
     }
     event.preventDefault();
@@ -39,7 +37,6 @@ export default function DeliveryRequest2() {
 
   function clickDone() {
     alert(" Are you sure you want to mark the Request as Done?");
-    // TODO: Disable volunteer and Redirect to Dashboard
     history.push("/view-volunteer-requests");
   }
 

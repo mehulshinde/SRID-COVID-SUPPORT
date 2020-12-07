@@ -32,8 +32,7 @@ export default function Home(props) {
         </div>
         <a
           onClick={() => {
-            history.push("/");
-            //    TODO: Add path to home page(default I assume)
+            history.push("/login");
           }}
         >
           Logout

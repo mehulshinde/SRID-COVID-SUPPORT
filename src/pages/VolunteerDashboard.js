@@ -46,7 +46,6 @@ export default function VolunteerDashboard() {
           <p
             onClick={() => {
               history.push("/view-volunteer-requests");
-              //    TODO Add your reroute path here
             }}
           >
             View Requests
