@@ -13,5 +13,5 @@ Click [link](https://company-205442.frontify.com/d/8Pnfq9AaB79x) to view the sty
 
 ## Limitations
 Accounts:
-1. Username: Mary Password: 12345 Login as User
-2. Username: Caleb Password: 12345 Login as volunteer
+1. __Username:__ Mary __Password:__ 12345 __Login as User__
+2. __Username:__ Caleb __Password:__ 12345 __Login as volunteer__
