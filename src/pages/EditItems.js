@@ -1,23 +1,21 @@
-import { useState } from 'react';
-import { Form, Col, Button } from 'react-bootstrap';
-import Item from './Item';
-import { useHistory } from 'react-router-dom';
+import { useState } from "react";
+import { Form, Col, Button } from "react-bootstrap";
+import Item from "./Item";
+import { useHistory } from "react-router-dom";
+import { updatedItems } from "./EditItem";
 
 export default function EditItems() {
-  const [itemName, setItemName] = useState('');
-  const [itemQty, setItemQty] = useState();
-  const [itemList, setItemList] = useState([]);
   const history = useHistory();
+  const [itemList, setItemList] = useState(updatedItems);
+
+  const [itemName, setItemName] = useState("");
+  const [itemQty, setItemQty] = useState();
 
   function handleAddItem(e) {
+    console.log(itemList);
     e.preventDefault();
     console.log(e);
-    if (itemName && itemQty)
-      setItemList([...itemList, { name: itemName, qty: itemQty }]);
-  }
-
-  function routeToEditItem(e) {
-    console.log(e);
+    if (itemName && itemQty) setItemList([...itemList, { itemName, itemQty }]);
   }
 
   return (
@@ -26,7 +24,7 @@ export default function EditItems() {
         <i
           class="icon-left-open back"
           onClick={() => {
-            history.push('/item-list');
+            history.push("/item-list");
           }}
         ></i>
       </div>
@@ -62,7 +60,16 @@ export default function EditItems() {
           </Form.Row>
         </Form>
         {itemList.map((item) => (
-          <Item item={item} onClick={routeToEditItem}></Item>
+          <div
+            onClick={() => {
+              history.push({
+                pathname: "/edit-item-list/item",
+                state: { item, itemList },
+              });
+            }}
+          >
+            <Item item={item}></Item>
+          </div>
         ))}
       </div>
     </>

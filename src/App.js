@@ -10,7 +10,7 @@ import VolunteerDashboard from "./pages/VolunteerDashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 import EditItems from "./pages/EditItems";
-
+import EditItem from "./pages/EditItem";
 
 import Login from "./pages/login";
 import Signup from "./pages/signup";
@@ -18,7 +18,7 @@ import Signup from "./pages/signup";
 import ViewRequests from "./pages/viewRequests";
 import ViewRequests2 from "./pages/viewRequests2";
 import DeliveryRequest2 from "./pages/DeliveryRequest2";
-import DeliveryRequest from "./pages/DeliveryRequest"
+import DeliveryRequest from "./pages/DeliveryRequest";
 
 import Subscription from "./pages/Subscription";
 import Home from "./pages/Home";
@@ -45,6 +45,7 @@ function App() {
         <Switch>
           <Route exact path="/" render={() => <div>HOME</div>}></Route>
           <Route exact path="/item-list" render={() => <ItemList />}></Route>
+          <Route exact component={EditItem} path="/edit-item-list/item"></Route>
           <Route
             exact
             path="/subscription-item-list"
@@ -66,14 +67,34 @@ function App() {
             path="/new-request/volunteer-selection"
             render={() => <VolunteerSelection />}
           ></Route>
-          <Route exact path="/deliveryRequest" render={() => <DeliveryRequest />}></Route>
-          <Route exact path="/subscribe" render={() => <Subscription />}></Route>
+          <Route
+            exact
+            path="/deliveryRequest"
+            render={() => <DeliveryRequest />}
+          ></Route>
+          <Route
+            exact
+            path="/subscribe"
+            render={() => <Subscription />}
+          ></Route>
           <Route exact path="/user-home" render={() => <Home />}></Route>
           <Route exact path="/login" render={() => <Login />}></Route>
           <Route exact path="/signup" render={() => <Signup />}></Route>
-          <Route exact path="/viewRequests" render={() => <ViewRequests />}></Route>
-          <Route exact path="/viewRequests2" render={() => <ViewRequests2 />}></Route>
-          <Route exact path="/deliveryRequest2" render={() => <DeliveryRequest2 />}></Route>
+          <Route
+            exact
+            path="/viewRequests"
+            render={() => <ViewRequests />}
+          ></Route>
+          <Route
+            exact
+            path="/viewRequests2"
+            render={() => <ViewRequests2 />}
+          ></Route>
+          <Route
+            exact
+            path="/deliveryRequest2"
+            render={() => <DeliveryRequest2 />}
+          ></Route>
 
           <Route
             exact

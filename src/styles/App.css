@@ -2,14 +2,14 @@
   text-align: center;
 }
 
-html{
+html {
   display: flex;
-  background: #D5D5D8;
+  background: #d5d5d8;
 }
 
-.container{
+.container {
   display: flex;
-  background: #D5D5D8;
+  background: #d5d5d8;
 }
 .App-logo {
   height: 40vmin;
@@ -166,11 +166,11 @@ p {
   /* background: #f6f6f6; */
   border-radius: 8px;
 }
-.calendar{
+.calendar {
   width: 500px;
 }
 
-.calendar_default_corner{
+.calendar_default_corner {
   display: none !important;
 }
 
@@ -235,61 +235,66 @@ p {
   display: flex;
 }
 
-.btn-cancel, .btn-cancel:hover, .btn-cancel:active, .btn-cancel:visited {
-  background-color:#434d65 !important;
-  border-radius:26px !important;
-  border:2px solid #434d65 !important;
-  display:inline-block !important;
-  cursor:pointer !important;
-  color:#ffffff !important;
-  font-family:Roboto !important;
-  font-size:20px !important;
-  font-weight:bold !important;
-  padding:10px 25px !important;
-  text-decoration:none !important;
-  text-shadow:0px 1px 0px #14203e !important;
+.btn-cancel,
+.btn-cancel:hover,
+.btn-cancel:active,
+.btn-cancel:visited {
+  background-color: #434d65 !important;
+  border-radius: 26px !important;
+  border: 2px solid #434d65 !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+  font-family: Roboto !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  padding: 10px 25px !important;
+  text-decoration: none !important;
+  text-shadow: 0px 1px 0px #14203e !important;
 }
 
-.btn-ok, .btn-ok:hover, .btn-ok:active, .btn-ok:visited {
-  background-color:#aa767c !important;
-  border-radius:26px !important;
-  border:2px solid #aa767c !important;
-  display:inline-block !important;
-  cursor:pointer !important;
-  color:#ffffff !important;
-  font-family:Roboto !important;
-  font-size:20px !important;
-  font-weight:bold !important;
-  padding:10px 25px !important;
-  text-decoration:none !important;
-  text-shadow:0px 1px 0px #14203e !important;
+.btn-ok,
+.btn-ok:hover,
+.btn-ok:active,
+.btn-ok:visited {
+  background-color: #aa767c !important;
+  border-radius: 26px !important;
+  border: 2px solid #aa767c !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+  font-family: Roboto !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  padding: 10px 25px !important;
+  text-decoration: none !important;
+  text-shadow: 0px 1px 0px #14203e !important;
 }
 
-.modal-title{
-  font-family:Roboto !important;
+.modal-title {
+  font-family: Roboto !important;
   font-size: 20px !important;
 }
 
-.modal-body{
-  font-family:Roboto !important;
+.modal-body {
+  font-family: Roboto !important;
   font-size: 16px !important;
 }
-#main    {
- 
+#main {
   border: 1px solid red;
   width: 280px;
   margin: 50px auto;
-  }
+}
 
-  div.ex1 {
-    width: 200px;
-    position: relative;
-    height:100px;
-    
-  }
-  div.table {
-    width: 100%;
-    
-    
-  }
-  
+div.ex1 {
+  width: 200px;
+  position: relative;
+  height: 100px;
+}
+div.table {
+  width: 100%;
+}
+
+.edit-item-button {
+  padding: 5px;
+}
