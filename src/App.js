@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import { Container } from "react-bootstrap";
 import ItemList from "./pages/ItemList.js";
 import EditItems from "./pages/EditItems";
+import EditItem from "./pages/EditItem";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 
@@ -30,6 +31,7 @@ function App() {
             path="/edit-item-list"
             render={() => <EditItems />}
           ></Route>
+          <Route exact component={EditItem} path="/edit-item-list/item"></Route>
         </Switch>
       </Router>
     </Container>

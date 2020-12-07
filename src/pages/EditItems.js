@@ -1,24 +1,31 @@
-import { useState } from 'react';
-import { Form, Col, Button } from 'react-bootstrap';
-import Item from './Item';
-import { useHistory } from 'react-router-dom';
+import { useState } from "react";
+import { Form, Col, Button } from "react-bootstrap";
+import Item from "./Item";
+import { useHistory } from "react-router-dom";
 
 export default function EditItems() {
-  const [itemName, setItemName] = useState('');
-  const [itemQty, setItemQty] = useState();
-  const [itemList, setItemList] = useState([]);
   const history = useHistory();
 
+  const [itemList, setItemList] = useState([]);
+
+  const [itemName, setItemName] = useState("");
+  const [itemQty, setItemQty] = useState();
+
+  // if (history.location.state.itemList) {
+  //   setItemList(history.location.state.itemList);
+  // }
+
   function handleAddItem(e) {
+    console.log(itemList);
     e.preventDefault();
     console.log(e);
-    if (itemName && itemQty)
-      setItemList([...itemList, { name: itemName, qty: itemQty }]);
+    if (itemName && itemQty) setItemList([...itemList, { itemName, itemQty }]);
   }
 
-  function routeToEditItem(e) {
-    console.log(e);
-  }
+  // function routeToEditItem(item) {
+  //   console.log("Routing to :", item.itemList);
+  //   history.push({ pathname: "/edit-item-list/item", state: newState });
+  // }
 
   return (
     <>
@@ -26,7 +33,7 @@ export default function EditItems() {
         <i
           class="icon-left-open back"
           onClick={() => {
-            history.push('/item-list');
+            history.push("/item-list");
           }}
         ></i>
       </div>
@@ -62,7 +69,16 @@ export default function EditItems() {
           </Form.Row>
         </Form>
         {itemList.map((item) => (
-          <Item item={item} onClick={routeToEditItem}></Item>
+          <div
+            onClick={() => {
+              history.push({
+                pathname: "/edit-item-list/item",
+                state: { item, itemList },
+              });
+            }}
+          >
+            <Item item={item}></Item>
+          </div>
         ))}
       </div>
     </>

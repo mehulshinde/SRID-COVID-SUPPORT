@@ -117,7 +117,7 @@ p {
   height: 49px;
   font-size: 30px;
   left: 17px;
-  top: 56px;
+  top: 10px;
   /* background: #f6f6f6; */
   border-radius: 8px;
 }
@@ -128,7 +128,8 @@ p {
   width: 281px;
   height: 49px;
   left: 78px;
-  top: 56px;
+  top: 10px;
+  align-self: center;
 
   /* Gray/01 */
   border-radius: 8px;
@@ -206,4 +207,8 @@ p {
 
 .subtext {
   display: flex;
+}
+
+.edit-item-button {
+  padding: 10px;
 }
