@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom';
 
 
 export default function Home() {
+  const history = useHistory();
+
   function onDemand(e) {
     e.preventDefault();
     // console.log('The link was clicked.');
@@ -14,11 +16,20 @@ export default function Home() {
   function subscribe(e) {
     e.preventDefault();
     //console.log('The link was clicked.');
-    window.location.href = "/subscribe";
+    window.location.href = "/subscription-item-list";
   }
 
   return (
     <>
+    <div className="back">
+        <div className="library-fontello">
+            <i className="icon-torso"></i>
+        </div>
+        <a onClick={() => {
+            history.push('/');
+            //    TODO: Add path to home page(default I assume)
+        }}>Logout</a>
+    </div>
       <div class="title">
         <h1>Home</h1>
       </div>

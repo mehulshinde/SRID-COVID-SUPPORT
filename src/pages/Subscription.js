@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+
 
 
 export default function Subscription() {
@@ -33,7 +34,7 @@ export default function Subscription() {
         <i
           class="icon-left-open back"
           onClick={() => {
-            history.push('/user-home');
+            history.push('/subscription-item-list');
           }}
         ></i>
       </div>
@@ -87,9 +88,9 @@ export default function Subscription() {
               <option>Monthly</option>
             </Form.Control>
           </Form.Group>
-          <Button type="submit" onClick={handleAddItem}>
-            Next
-          </Button>
+          <Link to="/new-request/volunteer-selection">
+            <Button type="submit">Find Volunteer</Button>
+          </Link>
         </Form>
       </div>
     </>

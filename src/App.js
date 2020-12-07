@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 import { Container } from 'react-bootstrap';
 import ItemList from './pages/ItemList.js';
+import ItemListSub from './pages/ItemListSub.js';
+
 import VolunteerSignup from './pages/VolunteerSignup';
 import AvailabilityHealthStatus from './pages/Availablity-HealthStatus';
 import VolunteerDashboard from './pages/VolunteerDashboard';
@@ -40,6 +42,8 @@ function App() {
         <Switch>
           <Route exact path="/" render={() => null}></Route>
           <Route exact path="/item-list" render={() => <ItemList />}></Route>
+          <Route exact path="/subscription-item-list" render={() => <ItemListSub />}></Route>
+
           <Route exact path="/subscribe" render={() => <Subscription />}></Route>
           <Route exact path="/user-home" render={() => <Home />}></Route>
           <Route  exact  path="/new-request/form"  render={() => <NewRequestForm />} ></Route> 
