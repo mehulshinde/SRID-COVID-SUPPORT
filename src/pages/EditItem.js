@@ -2,24 +2,20 @@ import { useState } from "react";
 import { Form, Col, Button } from "react-bootstrap";
 import Item from "./Item";
 import { useHistory } from "react-router-dom";
+// import defItemList from "./EditItems";
 
+export let updatedItems = [];
 const EditItem = () => {
   const history = useHistory();
   const [itemName, setItemName] = useState(
     history.location.state.item.itemName
   );
-  const [itemQty, setItemQty] = useState(history.location.state.item.itemQty);
-  const originalName = history.location.state.name;
-  const originalQty = history.location.state.qty;
-  const [itemList, setItemList] = useState([]);
   console.log(history.location.state);
-
-  //   function handleAddItem(e) {
-  //     e.preventDefault();
-  //     console.log(e);
-  //     if (itemName && itemQty)
-  //       setItemList([...itemList, { name: itemName, qty: itemQty }]);
-  //   }
+  const [itemQty, setItemQty] = useState(history.location.state.item.itemQty);
+  const originalName = history.location.state.item.itemName;
+  const originalQty = history.location.state.item.itemQty;
+  const [itemList, setItemList] = useState(history.location.state.itemList);
+  console.log(history.location.state);
 
   function handleSaveItem(e) {
     if (itemName && itemQty) {
@@ -33,10 +29,11 @@ const EditItem = () => {
         }
       });
       console.log(newItems);
-      // history.push({
-      //   pathname: "/edit-item-list",
-      //   state: { itemList: newItems },
-      // });
+      updatedItems = newItems;
+      history.push({
+        pathname: "/edit-item-list",
+        state: { itemList: newItems },
+      });
     }
   }
 

@@ -2,18 +2,14 @@ import { useState } from "react";
 import { Form, Col, Button } from "react-bootstrap";
 import Item from "./Item";
 import { useHistory } from "react-router-dom";
+import { updatedItems } from "./EditItem";
 
 export default function EditItems() {
   const history = useHistory();
-
-  const [itemList, setItemList] = useState([]);
+  const [itemList, setItemList] = useState(updatedItems);
 
   const [itemName, setItemName] = useState("");
   const [itemQty, setItemQty] = useState();
-
-  // if (history.location.state.itemList) {
-  //   setItemList(history.location.state.itemList);
-  // }
 
   function handleAddItem(e) {
     console.log(itemList);
@@ -21,11 +17,6 @@ export default function EditItems() {
     console.log(e);
     if (itemName && itemQty) setItemList([...itemList, { itemName, itemQty }]);
   }
-
-  // function routeToEditItem(item) {
-  //   console.log("Routing to :", item.itemList);
-  //   history.push({ pathname: "/edit-item-list/item", state: newState });
-  // }
 
   return (
     <>
