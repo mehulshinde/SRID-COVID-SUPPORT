@@ -2,6 +2,8 @@ import "../styles/App.css";
 import Item from "./Item";
 import { useHistory } from "react-router-dom";
 import { editedItems } from "./EditItems";
+import { requestFor } from "./ViewRequests";
+
 export let initialItems = [];
 export default function DeliveryRequest2() {
   const history = useHistory();
@@ -23,14 +25,14 @@ export default function DeliveryRequest2() {
         "You have not checked all the items. Are you sure you want to mark the Request as Done?"
       );
       // TODO: Disable volunteer and Redirect to Dashboard
-      history.push("/view-complete-volunteer-requests");
+      history.push("/view-volunteer-requests");
     } else if (
       event.target.elements.milk_available.checked &&
       event.target.elements.yoghurt_available.checked
     ) {
       alert(" Are you sure you want to mark the Request as Done?");
       // TODO: Disable volunteer and Redirect to Dashboard
-      history.push("/view-complete-volunteer-requests");
+      history.push("/view-volunteer-requests");
     }
     event.preventDefault();
   }
@@ -38,7 +40,7 @@ export default function DeliveryRequest2() {
   function clickDone() {
     alert(" Are you sure you want to mark the Request as Done?");
     // TODO: Disable volunteer and Redirect to Dashboard
-    history.push("/view-complete-volunteer-requests");
+    history.push("/view-volunteer-requests");
   }
 
   return (
@@ -52,7 +54,7 @@ export default function DeliveryRequest2() {
         ></i>
       </div>
       <div className="title">
-        <h2> Mary's Request</h2>
+        <h2> {requestFor}'s Request</h2>
         <p>07 Dec 2020 6 PM</p>
       </div>
       <div className="body">
