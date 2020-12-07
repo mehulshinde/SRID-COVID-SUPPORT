@@ -57,7 +57,9 @@ export default function ItemListSub() {
       )}
       <Row className="justify-content-between align-content-center">
         <Col>
+        <Link to="/user-home">
           <Button variant="secondary">Cancel</Button>
+        </Link>
         </Col>
         <Col>
           <Link to="/subscribe">
