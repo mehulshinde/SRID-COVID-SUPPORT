@@ -1,12 +1,26 @@
 import "../styles/App.css";
+import { useState } from "react";
+
 import { useHistory } from "react-router-dom";
 import Calendar from "../calendar/calendar2";
 
+export let requestFor = "";
+
 export default function ViewRequests() {
   const history = useHistory();
+  const [r1status, setR1Status] = useState("Received");
+  const [r2status, setR2Status] = useState("Received");
 
   function handleSubmit(event) {
     event.preventDefault();
+  }
+
+  function handleListItem(e) {
+    if (e == "request1") {
+      setR1Status("Done");
+    } else {
+      setR2Status("Done");
+    }
   }
 
   return (
@@ -35,35 +49,41 @@ export default function ViewRequests() {
                   <th>By</th>
                   <th>Type</th>
 
-                  <th>
+                  {/* <th>
                     {" "}
                     <div className="library-fontello">
                       <i class="icon-basket"></i> Status{" "}
                     </div>
-                  </th>
+                  </th> */}
                 </tr>
               </thead>
 
               <tr
+                id="request1"
                 onClick={() => {
+                  handleListItem("request1");
+                  requestFor = "Mary";
                   history.push("/delivery-request");
                 }}
               >
                 <td>6 PM</td>
                 <td>Mary</td>
                 <td>Subscription</td>
-                <div>
-                  <td>Received</td>
-                </div>
+                <div>{/* <td>{r1status}</td> */}</div>
               </tr>
 
-              <tr>
+              <tr
+                id="request2"
+                onClick={() => {
+                  requestFor = "Paul";
+                  handleListItem("request2");
+                  history.push("/delivery-request-active");
+                }}
+              >
                 <td>8 PM</td>
                 <td>Paul</td>
                 <td>On-Demand</td>
-                <a href="#">
-                  <td>Received</td>
-                </a>
+                {/* <td>{r2status}</td> */}
               </tr>
             </table>
           </div>
