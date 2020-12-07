@@ -1,6 +1,6 @@
-import '../styles/App.css';
-import '../styles/VolunteerSignup.css';
-import React from 'react';
+import "../styles/App.css";
+import "../styles/VolunteerSignup.css";
+import React from "react";
 
 export default function signup() {
   function handleSubmit(event) {
@@ -8,7 +8,7 @@ export default function signup() {
       event.target.elements.username.length < 4 ||
       event.target.elements.password.length < 4
     ) {
-      alert('Please enter Username Password Correctly');
+      alert("Please enter Username Password Correctly");
       // TODO Redirect to home page
     } else {
       // TODO Redirect to Dashboard
@@ -43,7 +43,7 @@ export default function signup() {
               Email ID <input type="text" name="username" className="input" />
             </div>
             <div>
-              Password{' '}
+              Password{" "}
               <input
                 type="password"
                 name="password"

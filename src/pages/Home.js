@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
-import { Form, Col, Button, Table } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Form, Col, Button, Table } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 export default function Home(props) {
   const history = useHistory();
-  const from = new URLSearchParams(window.location.search).get('from');
+  const from = new URLSearchParams(window.location.search).get("from");
 
   useEffect(() => {
-    if (from === 'test') {
+    if (from === "test") {
       setTimeout(() => {
-        alert('Volunteers have been matched for your pending request');
-        history.push('/new-request/volunteer-selection');
+        alert("Volunteers have been matched for your pending request");
+        history.push("/new-request/volunteer-selection");
       }, 3000);
     }
   }, []);
@@ -18,12 +18,12 @@ export default function Home(props) {
   function onDemand(e) {
     e.preventDefault();
     // console.log('The link was clicked.');
-    history.push('/item-list');
+    history.push("/item-list");
   }
   function subscribe(e) {
     e.preventDefault();
     //console.log('The link was clicked.');
-    history.push('/subscription-item-list');
+    history.push("/subscription-item-list");
   }
 
   return (
@@ -34,7 +34,7 @@ export default function Home(props) {
         </div>
         <a
           onClick={() => {
-            history.push('/');
+            history.push("/");
             //    TODO: Add path to home page(default I assume)
           }}
         >
@@ -62,7 +62,7 @@ export default function Home(props) {
                 <td>{request.date}</td>
                 <td>{request.type}</td>
 
-                <td>{request.itemList.map((item) => item.name).join(', ')}</td>
+                <td>{request.itemList.map((item) => item.name).join(", ")}</td>
                 <td>{request.volunteer}</td>
               </tr>
             ))}

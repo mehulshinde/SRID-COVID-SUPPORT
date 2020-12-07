@@ -1,37 +1,40 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/App.css';
-import { Container } from 'react-bootstrap';
-import ItemList from './pages/ItemList.js';
-import ItemListSub from './pages/ItemListSub.js';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/App.css";
+import { Container } from "react-bootstrap";
+import ItemList from "./pages/ItemList.js";
+import ItemListSub from "./pages/ItemListSub.js";
 
-import VolunteerSignup from './pages/VolunteerSignup';
-import AvailabilityHealthStatus from './pages/Availablity-HealthStatus';
-import VolunteerDashboard from './pages/VolunteerDashboard';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/App.css';
-import EditItems from './pages/EditItems';
+import VolunteerSignup from "./pages/VolunteerSignup";
+import AvailabilityHealthStatus from "./pages/Availablity-HealthStatus";
+import VolunteerDashboard from "./pages/VolunteerDashboard";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/App.css";
+import EditItems from "./pages/EditItems";
 
-import Login from './pages/login';
-import Signup from './pages/signup';
+import Login from "./pages/login";
+import Signup from "./pages/signup";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/App.css";
+import EditItem from "./pages/EditItem";
 
-import ViewRequests from './pages/viewRequests';
-import ViewRequests2 from './pages/viewRequests2';
-import DeliveryRequest2 from './pages/DeliveryRequest2';
-import DeliveryRequest from './pages/DeliveryRequest';
+import ViewRequests from "./pages/viewRequests";
+import ViewRequests2 from "./pages/viewRequests2";
+import DeliveryRequest2 from "./pages/DeliveryRequest2";
+import DeliveryRequest from "./pages/DeliveryRequest";
 
-import Subscription from './pages/Subscription';
-import Home from './pages/Home';
-import NewRequestForm from './pages/NewRequestForm';
-import VolunteerSelection from './pages/VolunteerSelection';
+import Subscription from "./pages/Subscription";
+import Home from "./pages/Home";
+import NewRequestForm from "./pages/NewRequestForm";
+import VolunteerSelection from "./pages/VolunteerSelection";
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom';
+} from "react-router-dom";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 function App() {
   const [requests, setRequests] = useState([]);
@@ -39,9 +42,9 @@ function App() {
   return (
     <Container
       style={{
-        maxWidth: '576px',
-        height: '100vh',
-        margin: 'auto',
+        maxWidth: "576px",
+        height: "100vh",
+        margin: "auto",
       }}
     >
       <Router>
@@ -58,6 +61,7 @@ function App() {
               />
             )}
           ></Route>
+          <Route exact component={EditItem} path="/edit-item-list/item"></Route>
           <Route
             exact
             path="/subscription-item-list"
