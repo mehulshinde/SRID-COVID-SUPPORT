@@ -148,7 +148,7 @@ p {
 }
 
 .body {
-  position: absolute;
+  position: relative;
   width: 343px;
   height: 654px;
   left: 17px;
@@ -227,3 +227,22 @@ p {
 .subtext {
   display: flex;
 }
+#main    {
+ 
+  border: 1px solid red;
+  width: 280px;
+  margin: 50px auto;
+  }
+
+  div.ex1 {
+    width: 200px;
+    position: relative;
+    height:100px;
+    
+  }
+  div.table {
+    width: 100%;
+    
+    
+  }
+  
