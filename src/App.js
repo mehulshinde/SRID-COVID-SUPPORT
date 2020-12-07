@@ -6,7 +6,7 @@ import "./styles/App.css";
 import { Container } from 'react-bootstrap';
 import ItemList from './pages/ItemList.js';
 import VolunteerSignup from './pages/VolunteerSignup';
-import AvailablityHealthStatus from './pages/Availablity-HealthStatus';
+import AvailabilityHealthStatus from './pages/Availablity-HealthStatus';
 import VolunteerDashboard from './pages/VolunteerDashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
