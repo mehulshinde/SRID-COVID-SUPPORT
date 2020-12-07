@@ -1,8 +1,9 @@
 import '../styles/App.css';
 
 import { useHistory } from 'react-router-dom';
-export default function deliveryRequest(){
+export default function  DeliveryRequest2(){
     const history = useHistory();
+
     function handleSubmit(event) {
      
             if (!event.target.elements.milk_available.checked ||

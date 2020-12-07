@@ -17,8 +17,8 @@ import Signup from "./pages/signup";
 
 import ViewRequests from "./pages/viewRequests";
 import ViewRequests2 from "./pages/viewRequests2";
-import DeliveryRequest2 from "./pages/deliveryRequest2";
-import DeliveryRequest from "./pages/deliveryRequest"
+import DeliveryRequest2 from "./pages/DeliveryRequest2";
+import DeliveryRequest from "./pages/DeliveryRequest"
 
 import Subscription from "./pages/Subscription";
 import Home from "./pages/Home";

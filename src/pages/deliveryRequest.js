@@ -1,7 +1,7 @@
 import '../styles/App.css';
 import { useHistory } from 'react-router-dom';
 
-export default function deliveryRequest(){
+export default function DeliveryRequest(){
     function handleSubmit(event) {
        
         event.preventDefault();
