@@ -16,10 +16,12 @@ export default function VolunteerSignup() {
       event.target.elements.copd.checked ||
       event.target.elements.asthma.checked
     ) {
-      alert("Not Eligible");
+      alert("Volunteer Registration Denied!\n " +
+          "Sorry you are not eligible to be a volunteer in the COVID pandemic situation");
       history.push("/");
     } else {
-      alert("Eligible");
+      alert("Volunteer Registration Successful!\n " +
+      "Welcome Aboard");
       history.push("/volunteer-dashboard");
     }
     event.preventDefault();
@@ -31,20 +33,20 @@ export default function VolunteerSignup() {
         <i
           className="icon-left-open back"
           onClick={() => {
-            history.push("/");
+            history.push("/signup");
           }}
         ></i>
       </div>
       <div className="title">
-        <h2>Volunteer Sign Up</h2>
+        <h1>Volunteer Sign Up</h1>
       </div>
       <div className="body">
         <form onSubmit={handleSubmit}>
           <div>
-            First Name: <input type="text" name="firstname" className="input" />
+            First Name: <input type="text" name="firstname" className="input" required={true}/>
           </div>
           <div>
-            Last Name: <input type="text" name="lastname" className="input" />
+            Last Name: <input type="text" name="lastname" className="input" required={true}/>
           </div>
           <div>
             Age:{" "}
@@ -54,9 +56,10 @@ export default function VolunteerSignup() {
               maxlength="3"
               min="0"
               className="input-age"
+              required={true}
             />
             Sex:
-            <select>
+            <select required={true}>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option>
@@ -64,8 +67,7 @@ export default function VolunteerSignup() {
           </div>
           <br />
           <div>
-            <h3>Medical Conditions</h3>
-            <h3>(tick all that apply)</h3>
+            <h2>Medical Conditions (tick all that apply)</h2>
           </div>
           <br />
           <fieldset>
@@ -127,7 +129,7 @@ export default function VolunteerSignup() {
           <br />
           <div>
             <div>
-              Username: <input type="text" name="username" className="input" />
+              Username: <input type="text" name="username" className="input" required={true}/>
             </div>
             <div>
               Phone number:{" "}
@@ -137,6 +139,7 @@ export default function VolunteerSignup() {
                 className="input"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 placeholder="650-390-7919"
+                required={true}
               />
             </div>
           </div>

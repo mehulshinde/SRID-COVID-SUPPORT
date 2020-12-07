@@ -11,14 +11,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 import EditItems from "./pages/EditItems";
 
-import Login from "./pages/login";
-import Signup from "./pages/signup";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 import EditItem from "./pages/EditItem";
 
-import ViewRequests from "./pages/viewRequests";
-import ViewRequests2 from "./pages/viewRequests2";
+import ViewRequests from "./pages/ViewRequests";
+import ViewRequests2 from "./pages/ViewRequests2";
 import DeliveryRequest2 from "./pages/DeliveryRequest2";
 import DeliveryRequest from "./pages/DeliveryRequest";
 
@@ -49,7 +49,7 @@ function App() {
     >
       <Router>
         <Switch>
-          <Route exact path="/" render={() => <div>HOME</div>}></Route>
+          <Route exact path="/" render={() => <Login />}></Route>
           <Route
             exact
             path="/item-list"

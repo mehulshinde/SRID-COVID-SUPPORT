@@ -9,6 +9,7 @@ a {
   line-height: 19px;
   color: #434d65 !important;
   display: block !important;
+  text-align: left;
 }
 .back {
   font-size: 30px !important;
@@ -22,6 +23,12 @@ a {
   top: 56px;
   bottom: 56px;
   border-radius: 10px;
+}
+h1 {
+  width: 500px !important;
+}
+h2 {
+  width: 500px !important;
 }
 
 p {

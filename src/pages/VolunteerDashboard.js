@@ -9,18 +9,14 @@ export default function VolunteerDashboard() {
       <div className="back">
         <div className="library-fontello">
           <i className="icon-torso"></i>
+            <a
+                onClick={() => {
+                    history.push("/login");
+                }}>Logout</a>
         </div>
-        <a
-          onClick={() => {
-            history.push("/");
-            //    TODO: Add path to home page(default I assume)
-          }}
-        >
-          Logout
-        </a>
       </div>
       <div className="title">
-        <h2>Volunteer Dashboard</h2>
+        <h1>Volunteer Dashboard</h1>
       </div>
       <div className="body">
         <div align="center" className="library-fontello">

@@ -1,4 +1,5 @@
 import "../styles/App.css";
+import "../styles/Availablity-HealthStatus.css"
 import Calendar from "../calendar/Calendar";
 import { useHistory } from "react-router-dom";
 
@@ -40,16 +41,14 @@ export default function AvailablityHealthStatus() {
         </div>
       </div>
       <div className="title">
-        <h2>Availability and</h2>
-        <h2>Health Status</h2>
+        <h1>Availability and Health Status</h1>
       </div>
 
       <div className="body">
         <form onSubmit={handleSubmit}>
           <br />
           <div>
-            <h3>Current Health Conditions</h3>
-            <h3>(tick all that apply)</h3>
+            <h2>Current Health Conditions (tick all that apply)</h2>
           </div>
           <br />
           <fieldset>
@@ -110,7 +109,7 @@ export default function AvailablityHealthStatus() {
           </fieldset>
           <br />
           <div>
-            <h3>Availability</h3>
+            <h2>Availability</h2>
           </div>
           <br />
           <div className="calendar">

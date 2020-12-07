@@ -1,0 +1,74 @@
+import "../styles/App.css";
+import "../styles/VolunteerSignup.css";
+import React from "react";
+import {useHistory} from "react-router-dom";
+
+export default function Signup() {
+
+  const history = useHistory();
+
+  function handleSubmit(event) {
+    if(event.target.elements.username.value === "Mary"){
+      alert("Success: User")
+      history.push("/user-home");
+    } else{
+      window.location.reload(true);
+    }
+    event.preventDefault();
+  }
+
+  return (
+    <>
+      <div className="title">
+        <h1>BenevoleBuddy</h1>
+      </div>
+      <div className="body">
+        <form onSubmit={handleSubmit}>
+          <br />
+          <div>
+            <h2>Register as <a className="a-class" onClick={() => {
+              history.push("/signup");
+            }}
+            >User</a> or <a className="a-class" onClick={() => {
+              history.push("/volunteer-signup");
+            }}
+            >Volunteer</a>?</h2>
+          </div>
+
+          <br/>
+            <div>
+              Username <input type="text" name="username" className="input" required={true}/>
+            </div>
+            <div>
+              Email ID <input type="email" name="email" className="input-email" required={true}/>
+            </div>
+            <div>
+              Password{" "}
+              <input
+                type="password"
+                name="password"
+                className="input-password"
+                required={true}
+              />
+            </div>
+          <br/>
+            <div align="center">
+            <input
+              type="submit"
+              className="btn-primary btn"
+              value="Register"
+              id="submit"
+            ></input>
+          </div>
+        </form>
+        <br/>
+        <div align="center">
+          <a className="a-class" onClick={() => {
+            history.push("/login");
+          }}
+          >Already Registered? Login</a>
+        </div>
+      </div>
+    </>
+  );
+}
