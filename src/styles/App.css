@@ -298,3 +298,168 @@ div.table {
 .edit-item-button {
   padding: 5px;
 }
+
+.proceed-button {
+  padding: 10px;
+}
+
+.chat-header {
+  position: absolute;
+  width: 47px;
+  height: 49px;
+  left: 78px;
+  top: 56px;
+
+  /* Gray/01 */
+
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+.received-message {
+  padding: 10px;
+  position: absolute;
+  width: 245px;
+  height: 101px;
+  left: 17px;
+  top: 133px;
+
+  background: #14203e;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.received-msg-text {
+  width: 229px;
+  height: 88px;
+  left: 7px;
+  top: 7px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.received-msg-timestamp {
+  position: absolute;
+  width: 245px;
+  height: 21px;
+  left: 17px;
+  top: 241px;
+  /* Gray/01 */
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+.sent-message {
+  /* position: absolute; */
+  width: 245px;
+  height: auto;
+  left: 110px;
+  top: 133px;
+  background: #434d65;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.sent-text {
+  position: absolute;
+  /* display: inline; */
+  width: 229px;
+  height: auto;
+  left: 110px;
+  top: 133px;
+  /* border: 1px solid #ffffff; */
+  /* box-sizing: border-box; */
+  /* border-radius: 8px; */
+}
+
+.sent-msg-timestamp {
+  /* display: flex; */
+  /* position: relative; */
+  width: 245px;
+  height: 21px;
+  left: 110px;
+  /* top: 391px; */
+  /* Gray/01 */
+  background: #f6f6f6;
+  border-radius: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 5px;
+}
+
+.chat-title {
+  position: absolute;
+  width: 220px;
+  height: 49px;
+  left: 139px;
+  top: 56px;
+
+  /* Gray/01 */
+
+  background: #f6f6f6;
+  border-radius: 8px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #000000;
+}
+
+.text-input {
+  resize: none;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  height: auto;
+  width: auto;
+  overflow: scroll;
+}
+
+.send-button {
+  background-color: #14203e;
+  display: inline;
+  position: absolute;
+  bottom: 10px;
+  right: 2px;
+  font-size: 15px;
+  height: 35px;
+  width: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ffffff;
+  align-items: center;
+  border-radius: 8px;
+}
+
+div.end {
+  left: 15%;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+}

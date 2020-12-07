@@ -15,10 +15,11 @@ import EditItem from "./pages/EditItem";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 
-import ViewRequests from "./pages/viewRequests";
-import ViewRequests2 from "./pages/viewRequests2";
+import ViewRequests from "./pages/ViewRequests";
+import ViewRequests2 from "./pages/ViewRequests2";
 import DeliveryRequest2 from "./pages/DeliveryRequest2";
 import DeliveryRequest from "./pages/DeliveryRequest";
+import Chat from "./pages/Chat";
 
 import Subscription from "./pages/Subscription";
 import Home from "./pages/Home";
@@ -69,7 +70,7 @@ function App() {
           ></Route>
           <Route
             exact
-            path="/deliveryRequest"
+            path="/delivery-request"
             render={() => <DeliveryRequest />}
           ></Route>
           <Route
@@ -82,17 +83,17 @@ function App() {
           <Route exact path="/signup" render={() => <Signup />}></Route>
           <Route
             exact
-            path="/viewRequests"
+            path="/view-volunteer-requests"
             render={() => <ViewRequests />}
           ></Route>
           <Route
             exact
-            path="/viewRequests2"
+            path="/view-complete-volunteer-requests"
             render={() => <ViewRequests2 />}
           ></Route>
           <Route
             exact
-            path="/deliveryRequest2"
+            path="/delivery-request-active"
             render={() => <DeliveryRequest2 />}
           ></Route>
 
@@ -116,6 +117,7 @@ function App() {
             path="/edit-item-list"
             render={() => <EditItems />}
           ></Route>
+          <Route exact path="/chat" render={() => <Chat />}></Route>
         </Switch>
       </Router>
     </Container>
