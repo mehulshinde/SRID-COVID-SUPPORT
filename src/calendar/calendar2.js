@@ -41,9 +41,16 @@ class Calendar extends Component {
       events: [
         {
           id: 4,
-          text: "Upcoming Request",
+          text: "Mary Subscription",
           start: "2020-12-07T18:00:00",
           end: "2020-12-07T19:00:00",
+          backColor: "#AA767C",
+        },
+        {
+          id: 5,
+          text: "Paul On-Demand",
+          start: "2020-12-07T20:00:00",
+          end: "2020-12-07T21:00:00",
           backColor: "#AA767C",
         },
       ],

@@ -23,7 +23,7 @@ export default function ViewRequests2() {
       <div className="body">
         <div class="table">
           <div>
-            <h2>Upcoming Requests Today</h2>
+            <h2>Delivery Requests Today</h2>
 
             <table>
               <thead>
