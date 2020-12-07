@@ -44,12 +44,12 @@ export default function VolunteerDashboard() {
           <i
             className="icon-basket body-icons"
             onClick={() => {
-              history.push("/");
+              history.push("/view-volunteer-requests");
             }}
           ></i>
           <p
             onClick={() => {
-              history.push("/");
+              history.push("/view-volunteer-requests");
               //    TODO Add your reroute path here
             }}
           >

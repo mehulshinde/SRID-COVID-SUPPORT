@@ -3,10 +3,14 @@ import { Form, Col, Button } from "react-bootstrap";
 import Item from "./Item";
 import { useHistory } from "react-router-dom";
 import { updatedItems } from "./EditItem";
+import { initialItems } from "./DeliveryRequest2";
+
+export let editedItems = [];
 
 export default function EditItems() {
   const history = useHistory();
-  const [itemList, setItemList] = useState(updatedItems);
+  let generalList = updatedItems.length == 0 ? initialItems : updatedItems;
+  const [itemList, setItemList] = useState(generalList);
 
   const [itemName, setItemName] = useState("");
   const [itemQty, setItemQty] = useState();
@@ -24,7 +28,8 @@ export default function EditItems() {
         <i
           class="icon-left-open back"
           onClick={() => {
-            history.push("/item-list");
+            editedItems = itemList;
+            history.push("/delivery-request-active");
           }}
         ></i>
       </div>

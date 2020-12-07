@@ -1,7 +1,9 @@
 import "../styles/App.css";
+import { useHistory } from "react-router-dom";
 import Calendar from "../calendar/calendar2";
 
-export default function viewRequests() {
+export default function ViewRequests() {
+  const history = useHistory();
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -11,9 +13,9 @@ export default function viewRequests() {
       <div className="library-fontello">
         <i
           className="icon-left-open back"
-          // onClick={() => {
-          //     history.push('/item-list');
-          // }}
+          onClick={() => {
+            history.push("/volunteer-dashboard");
+          }}
         ></i>
       </div>
       <div className="title">
@@ -41,16 +43,16 @@ export default function viewRequests() {
                 </tr>
               </thead>
 
-              <tr>
+              <tr
+                onClick={() => {
+                  history.push("/delivery-request");
+                }}
+              >
                 <td>6 PM</td>
                 <td>Mary</td>
                 <td>Subscription</td>
                 <div>
-                  {" "}
-                  <a href="#">
-                    {" "}
-                    <td>Received</td>
-                  </a>{" "}
+                  <td>Received</td>
                 </div>
               </tr>
 
