@@ -1,27 +1,24 @@
-import { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
-
-
+import { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Subscription() {
   // const [itemName, setItemName] = useState('');
   // const [itemQty, setItemQty] = useState();
   // const [itemList, setItemList] = useState([]);
   const [startDate, setStartDate] = useState(new Date());
-  const [streetAddress, setStreetAddress] = useState('');
-  const [city, setCity] = useState('');
-  const [state, setState] = useState('');
+  const [streetAddress, setStreetAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
   const [zipCode, setZipCode] = useState();
-  const [frequency, setFrequency] = useState('');
-
+  const [frequency, setFrequency] = useState("");
 
   const history = useHistory();
 
   function handleAddItem(e) {
     e.preventDefault();
     //console.log(startDate + streetAddress + city + state + zipCode + frequency);
-    alert('Subscription successful! Your items will be delivered by');
+    alert("Subscription successful! Your items will be delivered by");
   }
 
   function Subscription(e) {
@@ -34,7 +31,7 @@ export default function Subscription() {
         <i
           class="icon-left-open back"
           onClick={() => {
-            history.push('/subscription-item-list');
+            history.push("/subscription-item-list");
           }}
         ></i>
       </div>
@@ -80,9 +77,11 @@ export default function Subscription() {
           </Form.Group>
           <Form.Group>
             <Form.Label>Delivery Frequency</Form.Label>
-            <Form.Control as="select"
-            value={frequency}
-            onChange={(e) => setFrequency(e.target.value)}>
+            <Form.Control
+              as="select"
+              value={frequency}
+              onChange={(e) => setFrequency(e.target.value)}
+            >
               <option>Weekly</option>
               <option>Bi-Weekly</option>
               <option>Monthly</option>

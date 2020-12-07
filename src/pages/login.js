@@ -1,63 +1,69 @@
-import '../styles/App.css';
-import '../styles/VolunteerSignup.css';
-import React from 'react';
+import "../styles/App.css";
+import "../styles/VolunteerSignup.css";
+import React from "react";
 
-export default function login(){
-    function handleSubmit(event) {
-        if ( (event.target.elements.username.length < 4 )||
-            (event.target.elements.password.length < 4 )) {
-            alert("Please enter Username Password Correctly")
-            // TODO Redirect to home page
-        } else {
-            
-            // TODO Redirect to Dashboard
-        }
-        event.preventDefault();
+export default function login() {
+  function handleSubmit(event) {
+    if (
+      event.target.elements.username.length < 4 ||
+      event.target.elements.password.length < 4
+    ) {
+      alert("Please enter Username Password Correctly");
+      // TODO Redirect to home page
+    } else {
+      // TODO Redirect to Dashboard
     }
+    event.preventDefault();
+  }
 
-        return (
-            <>  
-                <div className="library-fontello">
-                    {/* <i
+  return (
+    <>
+      <div className="library-fontello">
+        {/* <i
                         className="icon-left-open back"
                         // onClick={() => {
                         //     history.push('/item-list');
                         // }}
                     ></i> */}
-                </div>
-                <div className="title" >
-                    
-                    <h1 >BenevoleBuddy</h1>
-                   
-                </div>
-                <div className="body">
-                    
-                <form onSubmit={handleSubmit}>
-                            <br/>
-
-                            Please login to Continue..
-                            <br/>
-                            <br/>
-                        
-                        <div> 
-                            <div>
-                               
-                                Username: <input type="text" name="username" className="input"/>
-                            </div> 
-                            <div>
-                                Password: <input type="password" name="password" className="input" pattern="*****" placeholder=" "/>
-                            </div>
-                        </div>
-                        <br/>
-                        <div align="center">
-                            <input type="submit" className="btn-primary btn" value="Login In" id="submit"></input>
-                        </div>
-                        <div align="center">
-                        <a href="#">New User? Signup</a>
-                        </div>
-                    </form>
-                </div>
-                
-            </>
-        );
+      </div>
+      <div className="title">
+        <h1>BenevoleBuddy</h1>
+      </div>
+      <div className="body">
+        <form onSubmit={handleSubmit}>
+          <br />
+          Please login to Continue..
+          <br />
+          <br />
+          <div>
+            <div>
+              Username: <input type="text" name="username" className="input" />
+            </div>
+            <div>
+              Password:{" "}
+              <input
+                type="password"
+                name="password"
+                className="input"
+                pattern="*****"
+                placeholder=" "
+              />
+            </div>
+          </div>
+          <br />
+          <div align="center">
+            <input
+              type="submit"
+              className="btn-primary btn"
+              value="Login In"
+              id="submit"
+            ></input>
+          </div>
+          <div align="center">
+            <a href="#">New User? Signup</a>
+          </div>
+        </form>
+      </div>
+    </>
+  );
 }

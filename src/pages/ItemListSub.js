@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Form, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Form, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function ItemListSub() {
-  const [itemName, setItemName] = useState('');
+  const [itemName, setItemName] = useState("");
   const [itemQty, setItemQty] = useState();
   const [itemList, setItemList] = useState([]);
 
@@ -11,8 +11,8 @@ export default function ItemListSub() {
     e.preventDefault();
     console.log(e.target);
     setItemList([...itemList, { name: itemName, qty: itemQty }]);
-    setItemName('');
-    setItemQty('');
+    setItemName("");
+    setItemQty("");
   }
   return (
     <>
@@ -57,9 +57,9 @@ export default function ItemListSub() {
       )}
       <Row className="justify-content-between align-content-center">
         <Col>
-        <Link to="/user-home">
-          <Button variant="secondary">Cancel</Button>
-        </Link>
+          <Link to="/user-home">
+            <Button variant="secondary">Cancel</Button>
+          </Link>
         </Col>
         <Col>
           <Link to="/subscribe">

@@ -10,10 +10,12 @@ import VolunteerDashboard from "./pages/VolunteerDashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 import EditItems from "./pages/EditItems";
-import EditItem from "./pages/EditItem";
 
 import Login from "./pages/login";
 import Signup from "./pages/signup";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/App.css";
+import EditItem from "./pages/EditItem";
 
 import ViewRequests from "./pages/viewRequests";
 import ViewRequests2 from "./pages/viewRequests2";
@@ -32,7 +34,11 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import { useState } from "react";
+
 function App() {
+  const [requests, setRequests] = useState([]);
+
   return (
     <Container
       style={{
@@ -44,7 +50,17 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" render={() => <div>HOME</div>}></Route>
-          <Route exact path="/item-list" render={() => <ItemList />}></Route>
+          <Route
+            exact
+            path="/item-list"
+            render={(props) => (
+              <ItemList
+                {...props}
+                requests={requests}
+                setRequests={setRequests}
+              />
+            )}
+          ></Route>
           <Route exact component={EditItem} path="/edit-item-list/item"></Route>
           <Route
             exact
@@ -56,16 +72,32 @@ function App() {
             path="/subscribe"
             render={() => <Subscription />}
           ></Route>
-          <Route exact path="/user-home" render={() => <Home />}></Route>
+          <Route
+            exact
+            path="/user-home"
+            render={() => <Home requests={requests} />}
+          ></Route>
           <Route
             exact
             path="/new-request/form"
-            render={() => <NewRequestForm />}
+            render={(props) => (
+              <NewRequestForm
+                {...props}
+                requests={requests}
+                setRequests={setRequests}
+              />
+            )}
           ></Route>
           <Route
             exact
             path="/new-request/volunteer-selection"
-            render={() => <VolunteerSelection />}
+            render={(props) => (
+              <VolunteerSelection
+                {...props}
+                setRequests={setRequests}
+                requests={requests}
+              />
+            )}
           ></Route>
           <Route
             exact
@@ -77,7 +109,6 @@ function App() {
             path="/subscribe"
             render={() => <Subscription />}
           ></Route>
-          <Route exact path="/user-home" render={() => <Home />}></Route>
           <Route exact path="/login" render={() => <Login />}></Route>
           <Route exact path="/signup" render={() => <Signup />}></Route>
           <Route
