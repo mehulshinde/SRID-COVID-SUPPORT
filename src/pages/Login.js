@@ -8,12 +8,10 @@ export default function Login() {
   const history = useHistory();
 
   function handleSubmit(event) {
-    if(event.target.elements.username.value === "Mary" &&
-        event.target.elements.usertyp.value === "User"){
+    if(event.target.elements.username.value === "Mary"){
       alert("Login Successful: Welcome Mary!")
       history.push("/user-home");
-    } else if (event.target.elements.username.value === "Caleb" &&
-        event.target.elements.usertyp.value === "Volunteer") {
+    } else if (event.target.elements.username.value === "Caleb") {
       alert("Login Successful: Welcome Caleb!")
       history.push("/volunteer-dashboard");
     } else if (event.target.elements.username.value === "John" &&
@@ -50,11 +48,6 @@ export default function Login() {
                 required minLength="4"
               />
             </div>
-            <br/>
-            <input type="radio" id="vol" name="usertyp" value="Volunteer" className="input-radio"/>
-            <label htmlFor="vol"> Login as Volunteer</label><br/>
-            <input type="radio" id="user" name="usertyp" value="User" className="input-radio"/>
-            <label htmlFor="user"> Login as User</label><br/>
           </div>
           <br />
           <div align="center">

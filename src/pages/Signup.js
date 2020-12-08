@@ -9,7 +9,7 @@ export default function Signup() {
 
   function handleSubmit(event) {
     if(event.target.elements.username.value === "Mary"){
-      alert("Success: User")
+      alert("Registration Successful: Welcome Mary")
       history.push("/user-home");
     } else{
       window.location.reload(true);
@@ -29,7 +29,7 @@ export default function Signup() {
             <h2>Register as <a className="a-class" onClick={() => {
               history.push("/signup");
             }}
-            >User</a> or <a className="a-class" onClick={() => {
+            >Senior Citizen</a> or <a className="a-class" onClick={() => {
               history.push("/volunteer-signup");
             }}
             >Volunteer</a>?</h2>
@@ -49,6 +49,7 @@ export default function Signup() {
                 name="password"
                 className="input-password"
                 required={true}
+                required minLength="4"
               />
             </div>
           <br/>
