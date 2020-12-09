@@ -64,6 +64,7 @@ export default function DeliveryRequest2() {
       </div>
       <div className="title">
         <h1> {requestFor}'s Request</h1>
+        <p>07 Dec 2020 6 PM</p>
       </div>
       <p style={{ textAlign: 'center' }}>07 Dec 2020 6 PM</p>
       <div className="body">
@@ -115,15 +116,15 @@ export default function DeliveryRequest2() {
                   <div
                     className="library-fontello"
                     onClick={() => {
-                      history.push({ pathname: '/chat', state: chat });
+                      history.push({ pathname: "/chat", state: chat });
                     }}
                   >
-                    <i class="icon-comment-alt"></i> Chat{' '}
+                    <i class="icon-comment-alt"></i> Chat{" "}
                   </div>
                 </th>
                 <th>
                   <div className="library-fontello" onClick={callAlert}>
-                    <i class="icon-phone"></i> Call{' '}
+                    <i class="icon-phone"></i> Call{" "}
                   </div>
                 </th>
                 <th>
