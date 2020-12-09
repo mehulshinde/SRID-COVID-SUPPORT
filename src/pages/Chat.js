@@ -21,7 +21,7 @@ export default function Chat() {
       </div>
       {/* <div class="chat-header"></div> */}
       <div class="title">
-        <h2>{chatTitle}</h2>
+        <h1>{chatTitle}</h1>
       </div>
       {/* <div class="received-message">{receivedMsg[0]}</div> */}
       {/* <div class="received-message">{receivedMsg[0]}</div> */}

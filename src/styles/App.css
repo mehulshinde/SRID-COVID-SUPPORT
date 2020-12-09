@@ -1,6 +1,7 @@
 body {
   background: #d5d5d8;
-  background-image: url('../logo_light.png');
+  background-image: url("../logo_light.png");
+  font-family: 'Roboto';
 }
 
 .container {
@@ -37,11 +38,13 @@ button:active {
 }
 
 h1 {
+  /* position: absolute; */
+  /* height: 30px; */
   height: 35px;
 
   font-weight: bold;
   font-size: 30px;
-  line-height: 35px;
+  line-height: 30px;
 }
 
 h2 {
@@ -132,26 +135,36 @@ p {
   width: 60px;
   height: 60px;
 
-  /* background: #990909; */
+  background: #990909;
   border-radius: 8px;
+}
+
+.profile {
+  background-image: url("./default-profile.png");
 }
 
 .mary {
-  background-image: url('./mary.png');
+  background-image: url("./mary.png");
 }
 
 .paul {
-  background-image: url('./paul.png');
+  background-image: url("./paul.png");
 }
 
-.item-name {
-  width: 283px;
-  height: 29px;
-  margin-left: 10px;
+.default-picture {
+  background-image: url("./default.png");
+}
 
-  /* background: #f6f6f6; */
-  box-sizing: border-box;
-  border-radius: 8px;
+.milk {
+  background-image: url("./milk.png");
+}
+
+.yogurt {
+  background-image: url("./yogurt.png");
+}
+
+.orange {
+  background-image: url("./orange.png");
 }
 
 .quantity {
@@ -176,26 +189,17 @@ p {
   border-radius: 8px;
 }
 
-.item {
-  display: flex;
-  padding-top: 10px;
-  border-bottom: 2px solid #72798b;
-  /* -webkit-tap-highlight-color: #72798b; */
-  /* border-bottom: #14203e; */
-}
-
-.item:hover,
+/* .item:hover,
 .item:active {
   display: flex;
   padding-top: 10px;
   border-bottom: 2px solid #72798b;
-  /* border-bottom: #14203e; */
   background: #f6f6f6;
-}
+} */
 
-.subtext {
+/* .subtext {
   display: flex;
-}
+} */
 
 .btn-cancel,
 .btn-cancel:hover,
@@ -392,7 +396,7 @@ div.table {
   position: absolute;
   bottom: 10px;
   height: auto;
-  width: auto;
+  width: 280px;
   overflow: scroll;
 }
 
@@ -461,7 +465,8 @@ div.end {
   width: 50px;
 }
 
-.request-1-head {
+.request-1-head,
+.item {
   display: flex;
   margin-top: 8px;
   /* padding-top: 10px; */
@@ -471,7 +476,8 @@ div.end {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.request-name {
+.request-name,
+.item-name {
   padding-left: 8px;
 
   font-weight: bold;
@@ -479,7 +485,8 @@ div.end {
   line-height: 23px;
 }
 
-.request-time {
+.request-time,
+.subtext {
   /* display: inline; */
   /* padding: 8px; */
   padding-left: 8px;

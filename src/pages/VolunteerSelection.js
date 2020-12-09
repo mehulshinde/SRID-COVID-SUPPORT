@@ -47,15 +47,18 @@ export default function VolunteerSelection(props) {
           volunteers.map((volunteer) => {
             return (
               <div
+                class="request-1-head"
                 onClick={onClick}
                 key={volunteer.name}
-                className="py-3"
                 style={{
                   backgroundColor:
                     selected === volunteer.name ? 'white' : '#d6d5d8',
                 }}
               >
-                <span style={{fontSize: '20px'}}>{volunteer.name}</span>
+                <div class="picture profile"></div>
+                <div class="req-item">
+                  <div class="request-name">{volunteer.name}</div>
+                </div>
               </div>
             );
           })}

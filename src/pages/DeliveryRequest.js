@@ -1,16 +1,16 @@
-import Item from "./Item";
-import { useHistory } from "react-router-dom";
-import { requestFor } from "./ViewRequests";
+import Item from './Item';
+import { useHistory } from 'react-router-dom';
+import { requestFor } from './ViewRequests';
 export default function DeliveryRequest() {
   const history = useHistory();
   const itemList = [
-    { itemName: "Organic Milk", itemQty: 1 },
-    { itemName: "Yogurt", itemQty: 1 },
+    { itemName: 'Organic Milk', itemQty: 1 },
+    { itemName: 'Yogurt', itemQty: 1 },
   ];
 
   const sentMsg = [
     requestFor +
-      ",I am about to get you your groceries for this week, you specified you need: Organic Milk - 1 gallon Yoghurt - 1 Do you want anything changed?",
+      ',I am about to get you your groceries for this week, you specified you need: Organic Milk - 1 gallon Yoghurt - 1 Do you want anything changed?',
   ];
 
   const chat = { title: "Mary's Request", sent: sentMsg, received: [] };
@@ -24,14 +24,14 @@ export default function DeliveryRequest() {
         <i
           className="icon-left-open back"
           onClick={() => {
-            history.push("/view-volunteer-requests");
+            history.push('/view-volunteer-requests');
           }}
         ></i>
       </div>
       <div className="title">
-        <h2> {requestFor}'s Request</h2>
-        <p>07 Dec 2020 6 PM</p>
+        <h1> {requestFor}'s Request</h1>
       </div>
+      <p style={{ textAlign: 'center' }}>07 Dec 2020 6 PM</p>
       <div className="body">
         {itemList.map((item) => (
           <div>
@@ -66,7 +66,7 @@ export default function DeliveryRequest() {
           ></input> */}
           <button
             onClick={() => {
-              history.push({ pathname: "/chat", state: chat });
+              history.push({ pathname: '/chat', state: chat });
             }}
           >
             Process Delivery

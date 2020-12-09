@@ -1,5 +1,5 @@
-import Calendar from '../calendar/Calendar';
-import { useHistory } from 'react-router-dom';
+import Calendar from "../calendar/Calendar";
+import { useHistory } from "react-router-dom";
 
 export let disableVolunteerFlag = false;
 export default function AvailablityHealthStatus() {
@@ -15,13 +15,13 @@ export default function AvailablityHealthStatus() {
       event.target.elements.bodyaches.checked
     ) {
       alert(
-        'Covid Symptoms observed.You are not Eligible for Volunteering. Account Disable for 14 days'
+        "Covid Symptoms observed.You are not Eligible for Volunteering. Account Disable for 14 days"
       );
-      history.push('/login');
+      history.push("/login");
       disableVolunteerFlag = true;
     } else {
-      alert('Data Updated');
-      history.push('/volunteer-dashboard');
+      alert("Data Updated");
+      history.push("/volunteer-dashboard");
     }
     event.preventDefault();
   }
@@ -33,18 +33,22 @@ export default function AvailablityHealthStatus() {
           <i
             className="icon-left-open"
             onClick={() => {
-              history.push('/volunteer-dashboard');
+              history.push("/volunteer-dashboard");
             }}
           ></i>
         </div>
       </div>
-      <div className="title">Availability and Health Status</div>
+      <div className="title">
+        <h1>Availability </h1>
+        <h1>& Health Status</h1>
+      </div>
 
       <div className="body">
         <form onSubmit={handleSubmit}>
           <br />
           <div>
-            <h2>Current Health Conditions (tick all that apply)</h2>
+            <h2>Current Health Conditions</h2>
+            <>(tick all that apply)</>
           </div>
           <br />
           <fieldset>

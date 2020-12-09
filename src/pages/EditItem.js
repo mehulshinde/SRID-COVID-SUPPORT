@@ -92,13 +92,13 @@ const EditItem = () => {
           </Form.Row>
           <Form.Row>
             <div class="edit-item-button">
-              <Button onClick={handleSaveItem}>Save</Button>
+              <button onClick={handleSaveItem}>Save</button>
             </div>
             <div class="edit-item-button">
-              <Button onClick={handleDeleteItem}>Delete</Button>
+              <button onClick={handleDeleteItem}>Delete</button>
             </div>
             <div class="edit-item-button">
-              <Button onClick={handleCancel}>Cancel</Button>
+              <button onClick={handleCancel}>Cancel</button>
             </div>
           </Form.Row>
         </Form>
