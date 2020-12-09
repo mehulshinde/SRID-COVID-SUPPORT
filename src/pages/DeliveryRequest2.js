@@ -18,7 +18,7 @@ export default function DeliveryRequest2() {
   };
   const itemList = [
     { itemName: 'Organic Milk', itemQty: 1 },
-    { itemName: 'Yogurt', itemQty: 1 },
+    { itemName: 'Orange', itemQty: 1 },
   ];
   console.log('Edited Items', editedItems);
   //   if (editedItems.length == 0) initialItems = itemList;
@@ -64,9 +64,8 @@ export default function DeliveryRequest2() {
       </div>
       <div className="title">
         <h1> {requestFor}'s Request</h1>
-        <p>07 Dec 2020 6 PM</p>
       </div>
-      <p style={{ textAlign: 'center' }}>07 Dec 2020 6 PM</p>
+      {/* <p style={{ textAlign: 'center' }}>8 Dec 2020 6 PM</p> */}
       <div className="body">
         {initialItems.map((item) => (
           <div>

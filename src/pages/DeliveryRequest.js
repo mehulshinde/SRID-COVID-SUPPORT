@@ -30,9 +30,8 @@ export default function DeliveryRequest() {
       </div>
       <div className="title">
         <h1> {requestFor}'s Request</h1>
-        <p>07 Dec 2020 6 PM</p>
       </div>
-      <p style={{ textAlign: 'center' }}>07 Dec 2020 6 PM</p>
+      {/* <p style={{ textAlign: 'center' }}>10 Dec 2020 6 PM</p> */}
       <div className="body">
         {itemList.map((item) => (
           <div>

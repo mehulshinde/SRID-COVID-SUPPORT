@@ -35,75 +35,39 @@ export default function ViewRequests() {
       <div class="title">Requests</div>
 
       <div className="body">
-        {/* <div class="table"> */}
         <h2>Requests for Today</h2>
-        {/* <div align="center" class="table">
-          <table>
-            <thead>
-              <tr>
-                <th>Time</th>
-                <th>By</th>
-                <th>Type</th>
-
-              </tr>
-            </thead>
-
-            <tr
-              class="request-clickable"
-              id="request1"
-              onClick={() => {
-                handleListItem("request1");
-                requestFor = "Mary";
-                history.push("/delivery-request");
-              }}
-            >
-              <td>6 PM</td>
-              <td>Mary</td>
-              <td>Subscription</td>
-            </tr>
-
-            <tr
-              id="request2"
-              onClick={() => {
-                requestFor = "Paul";
-                handleListItem("request2");
-                history.push("/delivery-request-active");
-              }}
-            >
-              <td>8 PM</td>
-              <td>Paul</td>
-              <td>On-Demand</td>
-            </tr>
-          </table>
-        </div> */}
         <div class="requests">
           <div
             class="request-1-head"
             onClick={() => {
-              handleListItem('request1');
+              handleListItem('request2');
               requestFor = 'Mary';
-              history.push('/delivery-request');
+              history.push('/delivery-request-active');
             }}
           >
             <div class="picture mary">
               <img alt="" src="\src\logo_light.png" />
             </div>
             <div class="req-item">
-              <div class="request-name">Mary's Subscription Request</div>
+              <div class="request-name">Mary's On-demand Request</div>
               <div class="request-time">6:00 P.M.</div>
             </div>
           </div>
+        </div>
+        <br />
+        <h2>Requests for Thursday</h2>
+        <div class="requests">
           <div
             class="request-1-head"
             onClick={() => {
-              requestFor = 'Paul';
-              handleListItem('request2');
-              history.push('/delivery-request-active');
+              requestFor = 'Mary';
+              handleListItem('request1');
+              history.push('/delivery-request');
             }}
           >
-            <div class="picture paul"></div>
+            <div class="picture mary"></div>
             <div class="req-item">
-              <div class="request-name">Paul's On-demand Request</div>
+              <div class="request-name">Mary's Subscription Request</div>
               <div class="request-time">8:00 P.M.</div>
             </div>
           </div>

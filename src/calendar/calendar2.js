@@ -1,20 +1,20 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   DayPilot,
   DayPilotCalendar,
   DayPilotNavigator,
-} from "daypilot-pro-react";
-import "./CalendarStyles.css";
+} from 'daypilot-pro-react';
+import './CalendarStyles.css';
 
 const styles = {
   wrap: {
-    display: "flex",
+    display: 'flex',
   },
   left: {
-    marginRight: "10px",
+    marginRight: '10px',
   },
   main: {
-    flexGrow: "1",
+    flexGrow: '1',
   },
 };
 
@@ -22,36 +22,36 @@ class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewType: "Days",
+      viewType: 'Days',
       days: 5,
       durationBarVisible: false,
-      timeRangeSelectedHandling: "Enabled",
+      timeRangeSelectedHandling: 'Enabled',
       onTimeRangeSelected: (args) => {
         let dp = this.calendar;
       },
-      eventDeleteHandling: " ",
-      onEventClick: " ",
+      eventDeleteHandling: ' ',
+      onEventClick: ' ',
     };
   }
 
   componentDidMount() {
     // load event data
     this.setState({
-      startDate: "2020-12-06",
+      startDate: '2020-12-06',
       events: [
         {
           id: 4,
-          text: "Mary Subscription",
-          start: "2020-12-07T18:00:00",
-          end: "2020-12-07T19:00:00",
-          backColor: "#AA767C",
+          text: 'Mary On-Demand',
+          start: '2020-12-09T18:00:00',
+          end: '2020-12-09T19:00:00',
+          backColor: '#AA767C',
         },
         {
           id: 5,
-          text: "Paul On-Demand",
-          start: "2020-12-07T20:00:00",
-          end: "2020-12-07T21:00:00",
-          backColor: "#AA767C",
+          text: 'Mary Subscription',
+          start: '2020-12-10T20:00:00',
+          end: '2020-12-10T21:00:00',
+          backColor: '#AA767C',
         },
       ],
     });

@@ -14,27 +14,27 @@ const styles = {
   // },
 };
 const eventList = [
-  {
-    id: 1,
-    text: "Available",
-    start: "2020-12-06T10:30:00",
-    end: "2020-12-06T13:00:00",
-    backColor: "#AA767C",
-  },
-  {
-    id: 2,
-    text: "Available",
-    start: "2020-12-07T17:30:00",
-    end: "2020-12-07T19:30:00",
-    backColor: "#AA767C",
-  },
-  {
-    id: 3,
-    text: "Available",
-    start: "2020-12-09T16:00:00",
-    end: "2020-12-09T19:00:00",
-    backColor: "#AA767C",
-  },
+  // {
+  //   id: 1,
+  //   text: "Available",
+  //   start: "2020-12-06T10:30:00",
+  //   end: "2020-12-06T13:00:00",
+  //   backColor: "#AA767C",
+  // },
+  // {
+  //   id: 2,
+  //   text: "Available",
+  //   start: "2020-12-07T17:30:00",
+  //   end: "2020-12-07T19:30:00",
+  //   backColor: "#AA767C",
+  // },
+  // {
+  //   id: 3,
+  //   text: "Available",
+  //   start: "2020-12-09T16:00:00",
+  //   end: "2020-12-09T19:00:00",
+  //   backColor: "#AA767C",
+  // },
 ];
 class Calendar extends Component {
   constructor(props) {

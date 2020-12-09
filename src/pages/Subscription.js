@@ -58,6 +58,12 @@ export default function Subscription(props) {
             />
           </Form.Group>
           <Form.Group>
+            <Form.Label>Delivery Time</Form.Label>
+            <Form.Control
+              type="time"
+            />
+          </Form.Group>
+          <Form.Group>
             <Form.Label>Shipping Address</Form.Label>
             <Form.Control
               type="text"

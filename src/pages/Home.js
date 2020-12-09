@@ -24,6 +24,8 @@ export default function Home(props) {
     history.push('/subscription-item-list');
   }
 
+  console.log(props.requests);
+
   return (
     <>
       <div
@@ -73,7 +75,7 @@ export default function Home(props) {
                 <td>{request.date}</td>
                 <td>{request.type}</td>
 
-                <td>{request.itemList.map((item) => item.name).join(', ')}</td>
+                <td>{request.itemList.map((item) => item.itemName).join(', ')}</td>
                 <td>{request.volunteer}</td>
               </tr>
             ))}

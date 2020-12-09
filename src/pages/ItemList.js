@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import Item from "./Item";
+import { useState } from 'react';
+import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Item from './Item';
 
 export default function ItemList(props) {
-  const [itemName, setItemName] = useState("");
+  const [itemName, setItemName] = useState('');
   const [itemQty, setItemQty] = useState();
   const [itemList, setItemList] = useState([]);
 
@@ -12,8 +12,9 @@ export default function ItemList(props) {
     e.preventDefault();
     console.log(e.target);
     setItemList([...itemList, { itemName: itemName, itemQty: itemQty }]);
-    setItemName("");
-    setItemQty("");
+    console.log(itemList);
+    setItemName('');
+    setItemQty('');
   }
   return (
     <>
@@ -22,7 +23,7 @@ export default function ItemList(props) {
           <i
             class="icon-left-open"
             onClick={() => {
-              props.history.push("/user-home");
+              props.history.push('/user-home');
             }}
           ></i>
         </div>
@@ -53,22 +54,22 @@ export default function ItemList(props) {
               <div class="library-fontello">
                 <i
                   class="icon-plus-circled"
-                  style={{ fontSize: "30px" }}
+                  style={{ fontSize: '30px' }}
                   onClick={handleAddItem}
                 ></i>
               </div>
             </Col>
           </Form.Row>
         </Form>
-        <div style={{ height: "70vh" }}>
+        <div style={{ height: '70vh' }}>
           {itemList.map((item) => (
             <div>
               <Item item={item}></Item>
             </div>
           ))}
         </div>
-        <Link to={{ pathname: "/new-request/form", state: { itemList } }}>
-          <Button style={{ float: "right" }}>Continue</Button>
+        <Link to={{ pathname: '/new-request/form', state: { itemList } }}>
+          <Button style={{ float: 'right' }}>Continue</Button>
         </Link>
       </div>
     </>
