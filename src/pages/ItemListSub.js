@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function ItemList(props) {
-  const [itemName, setItemName] = useState("");
+  const [itemName, setItemName] = useState('');
   const [itemQty, setItemQty] = useState();
   const [itemList, setItemList] = useState([]);
 
@@ -11,8 +11,8 @@ export default function ItemList(props) {
     e.preventDefault();
     console.log(e.target);
     setItemList([...itemList, { name: itemName, qty: itemQty }]);
-    setItemName("");
-    setItemQty("");
+    setItemName('');
+    setItemQty('');
   }
   return (
     <>
@@ -20,13 +20,11 @@ export default function ItemList(props) {
         <i
           class="icon-left-open back"
           onClick={() => {
-            props.history.push("/user-home");
+            props.history.push('/user-home');
           }}
         ></i>
       </div>
-      <div class="title">
-        <h1>Item List</h1>
-      </div>
+      <div class="title">Item List</div>
       <div class="body">
         <Form>
           <Form.Row>
@@ -66,7 +64,7 @@ export default function ItemList(props) {
             </Row>
           ))
         )}
-        <Link to={{ pathname: "/subscribe", state: { itemList } }}>
+        <Link to={{ pathname: '/subscribe', state: { itemList } }}>
           <Button>Continue</Button>
         </Link>
       </div>

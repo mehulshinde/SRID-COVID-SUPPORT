@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Form, Col, Button } from "react-bootstrap";
-import Item from "./Item";
-import { useHistory } from "react-router-dom";
+import { useState } from 'react';
+import { Form, Col, Button } from 'react-bootstrap';
+import Item from './Item';
+import { useHistory } from 'react-router-dom';
 // import defItemList from "./EditItems";
 
 export let updatedItems = [];
@@ -31,7 +31,7 @@ const EditItem = () => {
       console.log(newItems);
       updatedItems = newItems;
       history.push({
-        pathname: "/edit-item-list",
+        pathname: '/edit-item-list',
         state: { itemList: newItems },
       });
     }
@@ -39,7 +39,7 @@ const EditItem = () => {
 
   function handleCancel(e) {
     history.push({
-      pathname: "/edit-item-list",
+      pathname: '/edit-item-list',
     });
   }
 
@@ -53,7 +53,7 @@ const EditItem = () => {
     console.log(newItems);
     updatedItems = newItems;
     history.push({
-      pathname: "/edit-item-list",
+      pathname: '/edit-item-list',
       state: { itemList: newItems },
     });
   }
@@ -66,9 +66,7 @@ const EditItem = () => {
       <div class="library-fontello">
         <i class="icon-left-open back" onClick={handleCancel}></i>
       </div>
-      <div class="title">
-        <h1>Edit Items</h1>
-      </div>
+      <div class="title">Edit Items</div>
       <div class="body">
         <Form>
           <Form.Row>

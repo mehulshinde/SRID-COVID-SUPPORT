@@ -1,25 +1,24 @@
-import "../styles/App.css";
-import { useState } from "react";
+import { useState } from 'react';
 
-import { useHistory } from "react-router-dom";
-import Calendar from "../calendar/calendar2";
+import { useHistory } from 'react-router-dom';
+import Calendar from '../calendar/calendar2';
 
-export let requestFor = "";
+export let requestFor = '';
 
 export default function ViewRequests() {
   const history = useHistory();
-  const [r1status, setR1Status] = useState("Received");
-  const [r2status, setR2Status] = useState("Received");
+  const [r1status, setR1Status] = useState('Received');
+  const [r2status, setR2Status] = useState('Received');
 
   function handleSubmit(event) {
     event.preventDefault();
   }
 
   function handleListItem(e) {
-    if (e == "request1") {
-      setR1Status("Done");
+    if (e == 'request1') {
+      setR1Status('Done');
     } else {
-      setR2Status("Done");
+      setR2Status('Done');
     }
   }
 
@@ -29,13 +28,11 @@ export default function ViewRequests() {
         <i
           className="icon-left-open back"
           onClick={() => {
-            history.push("/volunteer-dashboard");
+            history.push('/volunteer-dashboard');
           }}
         ></i>
       </div>
-      <div class="title">
-        <h1>Requests</h1>
-      </div>
+      <div class="title">Requests</div>
 
       <div className="body">
         {/* <div class="table"> */}
@@ -83,9 +80,9 @@ export default function ViewRequests() {
           <div
             class="request-1-head"
             onClick={() => {
-              handleListItem("request1");
-              requestFor = "Mary";
-              history.push("/delivery-request");
+              handleListItem('request1');
+              requestFor = 'Mary';
+              history.push('/delivery-request');
             }}
           >
             <div class="picture mary">
@@ -99,9 +96,9 @@ export default function ViewRequests() {
           <div
             class="request-1-head"
             onClick={() => {
-              requestFor = "Paul";
-              handleListItem("request2");
-              history.push("/delivery-request-active");
+              requestFor = 'Paul';
+              handleListItem('request2');
+              history.push('/delivery-request-active');
             }}
           >
             <div class="picture paul"></div>

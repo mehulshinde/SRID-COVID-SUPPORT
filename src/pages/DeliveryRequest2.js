@@ -1,4 +1,3 @@
-import "../styles/App.css";
 import Item from "./Item";
 import { useHistory } from "react-router-dom";
 import { editedItems } from "./EditItems";

@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Form, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function ItemList(props) {
-  const [itemName, setItemName] = useState("");
+  const [itemName, setItemName] = useState('');
   const [itemQty, setItemQty] = useState();
   const [itemList, setItemList] = useState([]);
 
@@ -11,23 +11,21 @@ export default function ItemList(props) {
     e.preventDefault();
     console.log(e.target);
     setItemList([...itemList, { name: itemName, qty: itemQty }]);
-    setItemName("");
-    setItemQty("");
+    setItemName('');
+    setItemQty('');
   }
   return (
     <>
-      <div class="library-fontello">
+      <div className="library-fontello">
         <i
           class="icon-left-open back"
           onClick={() => {
-            props.history.push("/user-home");
+            props.history.push('/user-home');
           }}
         ></i>
       </div>
-      <div class="title">
-        <h1>Item List</h1>
-      </div>
-      <div class="body">
+      <div className="title">Item List</div>
+      <div className="body">
         <Form>
           <Form.Row>
             <Col xs="7">
@@ -66,7 +64,7 @@ export default function ItemList(props) {
             </Row>
           ))
         )}
-        <Link to={{ pathname: "/new-request/form", state: { itemList } }}>
+        <Link to={{ pathname: '/new-request/form', state: { itemList } }}>
           <button>Continue</button>
         </Link>
       </div>

@@ -1,24 +1,27 @@
-import "../styles/App.css";
-import "../styles/VolunteerSignup.css";
-import React from "react";
-import {useHistory} from "react-router-dom";
-import {disableVolunteerFlag} from "./Availablity-HealthStatus";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { disableVolunteerFlag } from './Availablity-HealthStatus';
 
 export default function Login() {
   const history = useHistory();
 
   function handleSubmit(event) {
-    if(event.target.elements.username.value === "Mary"){
-      alert("Login Successful: Welcome Mary!")
-      history.push("/user-home");
-    } else if (event.target.elements.username.value === "Caleb") {
-      alert("Login Successful: Welcome Caleb!")
-      history.push("/volunteer-dashboard");
-    } else if (event.target.elements.username.value === "John" &&
-      event.target.elements.usertyp.value === "Volunteer" && disableVolunteerFlag) {
-      alert("Covid Symptoms were logged by you in last 14 days. Volunteer Account disabled. Take Care :)")
+    if (event.target.elements.username.value === 'Mary') {
+      alert('Login Successful: Welcome Mary!');
+      history.push('/user-home');
+    } else if (event.target.elements.username.value === 'Caleb') {
+      alert('Login Successful: Welcome Caleb!');
+      history.push('/volunteer-dashboard');
+    } else if (
+      event.target.elements.username.value === 'John' &&
+      event.target.elements.usertyp.value === 'Volunteer' &&
+      disableVolunteerFlag
+    ) {
+      alert(
+        'Covid Symptoms were logged by you in last 14 days. Volunteer Account disabled. Take Care :)'
+      );
       window.location.reload(true);
-  } else{
+    } else {
       window.location.reload(true);
     }
     event.preventDefault();
@@ -26,26 +29,31 @@ export default function Login() {
 
   return (
     <>
-      <div className="title">
-        <h1>BenevoleBuddy</h1>
-      </div>
+      <div className="title">BenevoleBuddy</div>
       <div className="body">
         <form onSubmit={handleSubmit}>
           <br />
-          <h2>Login Credentials</h2>
           <br />
           <div>
             <div>
-              Username: <input type="text" name="username" className="input" required minLength="4"/>
+              Username:{' '}
+              <input
+                type="text"
+                name="username"
+                className="input"
+                required
+                minLength="4"
+              />
             </div>
             <div>
-              Password:{" "}
+              Password:{' '}
               <input
                 type="password"
                 name="password"
                 className="input-password"
                 placeholder=" "
-                required minLength="4"
+                required
+                minLength="4"
               />
             </div>
           </div>
@@ -59,13 +67,17 @@ export default function Login() {
             ></input>
           </div>
         </form>
-        <br/>
-          <div align="center">
-            <a className="a-class" onClick={() => {
-              history.push("/signup");
+        <br />
+        <div align="center">
+          <a
+            className="a-class"
+            onClick={() => {
+              history.push('/signup');
             }}
-            >New User? Signup</a>
-          </div>
+          >
+            New User? Signup
+          </a>
+        </div>
       </div>
     </>
   );

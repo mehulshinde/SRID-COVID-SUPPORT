@@ -1,14 +1,13 @@
-import { useState } from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { useState } from 'react';
+import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function Subscription(props) {
-
-  const [streetAddress, setStreetAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
+  const [streetAddress, setStreetAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
   const [zipCode, setZipCode] = useState();
-  const [frequency, setFrequency] = useState("");
+  const [frequency, setFrequency] = useState('');
 
   console.log(props);
   const { itemList } = props.location.state;
@@ -22,17 +21,17 @@ export default function Subscription(props) {
     props.setRequests([
       ...props.requests,
       {
-        type: "Subscription - " + frequency,
+        type: 'Subscription - ' + frequency,
         date: deliveryDate,
         itemList,
-        volunteer: "pending",
+        volunteer: 'pending',
       },
     ]);
     console.log(props.requests);
     alert(
-      "We are matching nearby available volunteers for you. We will notify you when we find one!"
+      'We are matching nearby available volunteers for you. We will notify you when we find one!'
     );
-    history.push("/user-home?from=test");
+    history.push('/user-home?from=test');
   }
 
   return (
@@ -41,25 +40,23 @@ export default function Subscription(props) {
         <i
           class="icon-left-open back"
           onClick={() => {
-            history.push("/subscription-item-list");
+            history.push('/subscription-item-list');
           }}
         ></i>
       </div>
-      <div class="title">
-        <h1>Subscription</h1>
-      </div>
+      <div class="title">Subscription</div>
       <div class="body">
         <Form>
-        <Form.Group>
-          <Form.Label>Delivery Date</Form.Label>
-          <Form.Control
-            type="date"
-            value={deliveryDate}
-            onChange={(e) => {
-              setDeliveryDate(e.target.value);
-            }}
-          />
-        </Form.Group>
+          <Form.Group>
+            <Form.Label>Delivery Date</Form.Label>
+            <Form.Control
+              type="date"
+              value={deliveryDate}
+              onChange={(e) => {
+                setDeliveryDate(e.target.value);
+              }}
+            />
+          </Form.Group>
           <Form.Group>
             <Form.Label>Shipping Address</Form.Label>
             <Form.Control

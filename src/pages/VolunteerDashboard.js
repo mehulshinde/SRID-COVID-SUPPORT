@@ -1,6 +1,4 @@
-import "../styles/App.css";
-import "../styles/VolunteerDashboard.css";
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 export default function VolunteerDashboard() {
   const history = useHistory();
@@ -9,7 +7,7 @@ export default function VolunteerDashboard() {
       <div
         class="logout"
         onClick={() => {
-          history.push("/login");
+          history.push('/login');
         }}
       >
         Logout
@@ -24,14 +22,12 @@ export default function VolunteerDashboard() {
           </a>
         </div> */}
       </div>
-      <div className="title">
-        <h1>Volunteer Dashboard</h1>
-      </div>
+      <div className="title">Volunteer Dashboard</div>
       <div className="body">
         <div
           class="volunteer-dashboard-option"
           onClick={() => {
-            history.push("/edit-volunteer-data");
+            history.push('/edit-volunteer-data');
           }}
         >
           <div align="center" className="library-fontello">
@@ -46,7 +42,7 @@ export default function VolunteerDashboard() {
         <div
           class="volunteer-dashboard-option"
           onClick={() => {
-            history.push("/view-volunteer-requests");
+            history.push('/view-volunteer-requests');
           }}
         >
           <div align="center" className="library-fontello">

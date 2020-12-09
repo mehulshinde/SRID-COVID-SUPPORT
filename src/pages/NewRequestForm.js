@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Form, Button, Row, Col } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { useState } from 'react';
+import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function NewRequestForm(props) {
   console.log(props);
@@ -15,17 +15,17 @@ export default function NewRequestForm(props) {
     props.setRequests([
       ...props.requests,
       {
-        type: "On demand",
+        type: 'On demand',
         date: deliveryDate,
         itemList,
-        volunteer: "pending",
+        volunteer: 'pending',
       },
     ]);
     console.log(props.requests);
     alert(
-      "We are matching nearby available volunteers for you. We will notify you when we find one!"
+      'We are matching nearby available volunteers for you. We will notify you when we find one!'
     );
-    history.push("/user-home?from=test");
+    history.push('/user-home?from=test');
   }
   return (
     <>
@@ -33,13 +33,11 @@ export default function NewRequestForm(props) {
         <i
           class="icon-left-open back"
           onClick={() => {
-            history.push("/item-list");
+            history.push('/item-list');
           }}
         ></i>
       </div>
-      <div class="title">
-        <h1>New Request</h1>
-      </div>
+      <div class="title">New Request</div>
       <div className="body">
         <Form>
           <Form.Group>
