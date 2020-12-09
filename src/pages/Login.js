@@ -31,12 +31,15 @@ export default function Login() {
     <>
       <div className="title">BenevoleBuddy</div>
       <div className="body">
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          style={{ fontSize: '20px', marginLeft: '13px' }}
+        >
           <br />
           <br />
           <div>
             <div>
-              Username:{' '}
+              Username:
               <input
                 type="text"
                 name="username"
@@ -46,7 +49,7 @@ export default function Login() {
               />
             </div>
             <div>
-              Password:{' '}
+              Password:
               <input
                 type="password"
                 name="password"

@@ -1,7 +1,7 @@
 body {
   background: #d5d5d8;
-  background-image: url("../logo_light.png");
-  font-family: 'Roboto';
+  background-image: url('../logo_light.png');
+  font-family: 'Lato';
 }
 
 .container {
@@ -140,31 +140,31 @@ p {
 }
 
 .profile {
-  background-image: url("./default-profile.png");
+  background-image: url('./default-profile.png');
 }
 
 .mary {
-  background-image: url("./mary.png");
+  background-image: url('./mary.png');
 }
 
 .paul {
-  background-image: url("./paul.png");
+  background-image: url('./paul.png');
 }
 
 .default-picture {
-  background-image: url("./default.png");
+  background-image: url('./default.png');
 }
 
 .milk {
-  background-image: url("./milk.png");
+  background-image: url('./milk.png');
 }
 
 .yogurt {
-  background-image: url("./yogurt.png");
+  background-image: url('./yogurt.png');
 }
 
 .orange {
-  background-image: url("./orange.png");
+  background-image: url('./orange.png');
 }
 
 .quantity {
@@ -556,7 +556,7 @@ div.table {
 
 /* Volunteer Signup */
 .input {
-  height: 25px;
+  height: 30px;
   width: 200px;
   flex: 0 0 200px;
   margin-left: 10px;
@@ -564,7 +564,7 @@ div.table {
   margin-top: 5px;
 }
 .input-email {
-  height: 25px;
+  height: 30px;
   width: 200px;
   flex: 0 0 200px;
   margin-left: 27px;
@@ -572,7 +572,7 @@ div.table {
   margin-top: 5px;
 }
 .input-password {
-  height: 25px;
+  height: 30px;
   width: 200px;
   flex: 0 0 200px;
   margin-left: 15px;

@@ -18,7 +18,7 @@ export default function Signup() {
     <>
       <div className="title">BenevoleBuddy</div>
       <div className="body">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ fontSize: '20px' }}>
           <br />
           <div>
             <h2>
@@ -55,12 +55,13 @@ export default function Signup() {
             />
           </div>
           <div>
-            Email Address
+            Email
             <input
               type="email"
               name="email"
               className="input-email"
               required={true}
+              style={{marginLeft: '52px'}}
             />
           </div>
           <div>
