@@ -42,14 +42,14 @@ export default function Home(props) {
         <h1>Home</h1>
       </div>
       <div class="body">
-       <div className="library-fontello" onClick={onDemand}>
+       <div className="library-fontello click-btn btn" onClick={onDemand}>
           <i className="icon-plus-circled sub"></i> <span class="sub">Create new on-demand request</span>
         </div>
 
-        <div className="library-fontello" onClick={subscribe}>
+        <div className="library-fontello click-btn btn" onClick={subscribe}>
            <i className="icon-plus-circled sub"></i> <span class="sub">Create new subscription request</span>
          </div>
-
+        <h2> List of Requests </h2>
         <Table>
           <thead>
             <tr>
