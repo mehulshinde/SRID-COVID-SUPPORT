@@ -49,9 +49,9 @@ export default function ItemList(props) {
               ></Form.Control>
             </Col>
             <Col xs="2">
-              <Button type="submit" onClick={handleAddItem}>
+              <button type="submit" onClick={handleAddItem}>
                 Add
-              </Button>
+              </button>
             </Col>
           </Form.Row>
         </Form>
@@ -67,7 +67,7 @@ export default function ItemList(props) {
           ))
         )}
         <Link to={{ pathname: "/new-request/form", state: { itemList } }}>
-          <Button>Continue</Button>
+          <button>Continue</button>
         </Link>
       </div>
     </>

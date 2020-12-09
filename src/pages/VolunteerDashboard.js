@@ -6,50 +6,53 @@ export default function VolunteerDashboard() {
   const history = useHistory();
   return (
     <>
-      <div className="back">
-        <div className="library-fontello">
+      <div
+        class="logout"
+        onClick={() => {
+          history.push("/login");
+        }}
+      >
+        Logout
+        {/* <div className="library-fontello">
           <i className="icon-torso"></i>
-            <a
-                onClick={() => {
-                    history.push("/login");
-                }}>Logout</a>
-        </div>
+          <a
+            onClick={() => {
+              history.push("/login");
+            }}
+          >
+            Logout
+          </a>
+        </div> */}
       </div>
       <div className="title">
         <h1>Volunteer Dashboard</h1>
       </div>
       <div className="body">
-        <div align="center" className="library-fontello">
-          <i
-            className="icon-clipboard body-icons"
-            onClick={() => {
-              history.push("/edit-volunteer-data");
-            }}
-          ></i>
-          <p
-            onClick={() => {
-              history.push("/edit-volunteer-data");
-            }}
-          >
-            Edit Availability and Health Status
-          </p>
+        <div
+          class="volunteer-dashboard-option"
+          onClick={() => {
+            history.push("/edit-volunteer-data");
+          }}
+        >
+          <div align="center" className="library-fontello">
+            <i className="icon-clipboard body-icons volunteer-action-shadow"></i>
+          </div>
+          <h2 class="volunteer-dashboard-option-text">
+            Availability & Health Status
+          </h2>
         </div>
         <br />
         <br />
-        <div align="center" className="library-fontello">
-          <i
-            className="icon-basket body-icons"
-            onClick={() => {
-              history.push("/view-volunteer-requests");
-            }}
-          ></i>
-          <p
-            onClick={() => {
-              history.push("/view-volunteer-requests");
-            }}
-          >
-            View Requests
-          </p>
+        <div
+          class="volunteer-dashboard-option"
+          onClick={() => {
+            history.push("/view-volunteer-requests");
+          }}
+        >
+          <div align="center" className="library-fontello">
+            <i className="icon-basket body-icons"></i>
+          </div>
+          <h2 class="volunteer-dashboard-option-text-2">Requests</h2>
         </div>
       </div>
     </>

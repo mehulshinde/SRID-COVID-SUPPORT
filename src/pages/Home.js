@@ -26,7 +26,15 @@ export default function Home(props) {
 
   return (
     <>
-      <div className="back">
+      <div
+        class="logout"
+        onClick={() => {
+          history.push("/login");
+        }}
+      >
+        Logout
+      </div>
+      {/* <div className="back">
         <div className="library-fontello">
           <i className="icon-torso"></i>
         </div>
@@ -37,18 +45,20 @@ export default function Home(props) {
         >
           Logout
         </a>
-      </div>
+      </div> */}
       <div class="title">
         <h1>Home</h1>
       </div>
       <div class="body">
-       <div className="library-fontello" onClick={onDemand}>
-          <i className="icon-plus-circled sub"></i> <span class="sub">Create new on-demand request</span>
+        <div className="library-fontello" onClick={onDemand}>
+          <i className="icon-plus-circled sub"></i>{" "}
+          <span class="sub">Create new on-demand request</span>
         </div>
 
         <div className="library-fontello" onClick={subscribe}>
-           <i className="icon-plus-circled sub"></i> <span class="sub">Create new subscription request</span>
-         </div>
+          <i className="icon-plus-circled sub"></i>{" "}
+          <span class="sub">Create new subscription request</span>
+        </div>
 
         <Table>
           <thead>

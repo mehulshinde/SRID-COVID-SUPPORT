@@ -18,7 +18,7 @@ button {
   font-family: Roboto !important;
   font-size: 20px;
   font-weight: bold !important;
-  padding: 10px 25px;
+  padding: 10px;
   text-decoration: none !important;
   text-shadow: 0px 1px 0px #14203e !important;
 }
@@ -106,6 +106,38 @@ p {
   vertical-align: middle;
 }
 
+.logout {
+  position: absolute;
+  padding: 6px;
+  left: 15px;
+  top: 59px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  border: 1px solid #14203e;
+  border-radius: 15px;
+  color: #d5d5d8;
+  background: #14203e;
+}
+
+.logout:active {
+  position: absolute;
+  padding: 6px;
+  left: 15px;
+  top: 59px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  border: 1px solid #14203e;
+  border-radius: 15px;
+  color: #14203e;
+  background: rgba(255, 255, 255, 0.089);
+}
+
 .title {
   /* display: flex; */
   position: absolute;
@@ -140,8 +172,16 @@ p {
   width: 60px;
   height: 60px;
 
-  background: #f6f6f6;
+  /* background: #990909; */
   border-radius: 8px;
+}
+
+.mary {
+  background-image: url("./mary.png");
+}
+
+.paul {
+  background-image: url("./paul.png");
 }
 
 .item-name {
@@ -254,7 +294,8 @@ div.ex1 {
   height: 100px;
 }
 div.table {
-  width: 100%;
+  height: auto;
+  padding: 10px;
 }
 
 .edit-item-button {
@@ -428,4 +469,72 @@ div.end {
 
 .sub {
   font-size: 20px !important;
+}
+
+.volunteer-dashboard-option {
+  margin-top: 20%;
+  border: 0px solid #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.479);
+  padding: 10px;
+  align-content: center;
+  background: rgba(255, 255, 255, 0.363);
+}
+
+.volunteer-dashboard-option:active {
+  border: 0px solid #ffffff;
+  /* background: #72798b; */
+  border-radius: 50px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.233);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.555);
+}
+
+.volunteer-dashboard-option-text {
+  padding: 5px;
+  padding-left: 10%;
+}
+
+.volunteer-dashboard-option-text-2 {
+  padding: 5px;
+  padding-left: 40%;
+}
+
+.request-clickable {
+  border: 1px solid #000000;
+  width: 50px;
+}
+
+.request-1-head {
+  display: flex;
+  margin-top: 8px;
+  /* padding-top: 10px; */
+  border: 1px solid #72798b;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.37);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.request-name {
+  padding-left: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.request-time {
+  /* display: inline; */
+  /* padding: 8px; */
+  padding-left: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.req-item {
+  display: block;
 }
