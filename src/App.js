@@ -46,6 +46,7 @@ function App() {
         maxWidth: "576px",
         height: "100vh",
         margin: "auto",
+        marginTop: '6vh'
       }}
     >
       <Router>

@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Form, Col, Button } from "react-bootstrap";
-import Item from "./Item";
-import { useHistory } from "react-router-dom";
-import { updatedItems } from "./EditItem";
-import { initialItems } from "./DeliveryRequest2";
+import { useState } from 'react';
+import { Form, Col, Button } from 'react-bootstrap';
+import Item from './Item';
+import { useHistory } from 'react-router-dom';
+import { updatedItems } from './EditItem';
+import { initialItems } from './DeliveryRequest2';
 
 export let editedItems = [];
 
@@ -12,7 +12,7 @@ export default function EditItems() {
   let generalList = updatedItems.length == 0 ? initialItems : updatedItems;
   const [itemList, setItemList] = useState(generalList);
 
-  const [itemName, setItemName] = useState("");
+  const [itemName, setItemName] = useState('');
   const [itemQty, setItemQty] = useState();
 
   function handleAddItem(e) {
@@ -29,13 +29,11 @@ export default function EditItems() {
           class="icon-left-open back"
           onClick={() => {
             editedItems = itemList;
-            history.push("/delivery-request-active");
+            history.push('/delivery-request-active');
           }}
         ></i>
       </div>
-      <div class="title">
-        <h1>Edit Items</h1>
-      </div>
+      <div class="title">Edit Items</div>
       <div class="body">
         <Form>
           <Form.Row>
@@ -68,7 +66,7 @@ export default function EditItems() {
           <div
             onClick={() => {
               history.push({
-                pathname: "/edit-item-list/item",
+                pathname: '/edit-item-list/item',
                 state: { item, itemList },
               });
             }}

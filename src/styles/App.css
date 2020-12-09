@@ -1,11 +1,11 @@
-html {
+body {
   background: #d5d5d8;
   background-image: url("../logo_light.png");
 }
 
 .container {
-  background: #d5d5d8;
-  background-image: url("../logo_light.png");
+  /* background: #d5d5d8; */
+  /* background-image: url("../logo_light.png"); */
 }
 
 button {
@@ -15,7 +15,6 @@ button {
   display: inline-block !important;
   cursor: pointer !important;
   color: #ffffff !important;
-  font-family: Roboto !important;
   font-size: 20px;
   font-weight: bold !important;
   padding: 10px;
@@ -30,7 +29,6 @@ button:active {
   display: inline-block !important;
   cursor: pointer !important;
   color: #ffffff !important;
-  font-family: Roboto !important;
   /* font-size: 20px; */
   font-weight: bold !important;
   /* padding: 10px 25px; */
@@ -42,9 +40,8 @@ h1 {
   /* position: absolute; */
   width: 170px;
   /* height: 30px; */
+  height: 35px;
 
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 30px;
@@ -53,12 +50,6 @@ h1 {
 }
 
 h2 {
-  /* position: absolute; */
-  width: 350px;
-  height: 23px;
-
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 23px;
@@ -66,16 +57,11 @@ h2 {
   color: #000000;
 }
 h3 {
-  /* position: absolute; */
   width: 350px;
   height: 23px;
-
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 23px;
-
   color: #000000;
 }
 
@@ -84,8 +70,6 @@ p {
   width: 37px;
   height: 19px;
 
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -95,40 +79,22 @@ p {
 }
 
 .back {
-  /* display: flex; */
-  position: absolute !important;
-  /* width: 47px; */
-  /* height: 49px; */
   font-size: 30px;
-  left: 17px;
-  margin-top: 5px;
-  /* border-radius: 8px; */
-  /* vertical-align: middle; */
+  float: left;
 }
 
 .logout {
-  position: absolute;
   padding: 6px;
-  left: 15px;
-  top: 59px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  border: 1px solid #14203e;
   border-radius: 15px;
   color: #d5d5d8;
   background: #14203e;
+  float: right;
 }
 
 .logout:active {
-  position: absolute;
   padding: 6px;
-  left: 15px;
-  top: 59px;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -139,26 +105,25 @@ p {
 }
 
 .title {
-  /* display: flex; */
-  position: absolute;
-  width: 281px;
-  height: 49px;
-  left: 78px;
-  top: 56px;
-  /* Gray/01 */
-  border-radius: 8px;
+  text-align: center;
+  height: 35px;
+
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
 }
 
 .body {
-  position: absolute;
-  width: 343px;
-  height: 654px;
-  left: 17px;
-  top: 117px;
+  /* position: absolute; */
+  /* width: 343px; */
+  /* height: 654px; */
+  /* left: 17px; */
+  /* top: 117px; */
   /* Gray/01 */
 
   /* background: #f6f6f6; */
-  border-radius: 8px;
+  /* border-radius: 8px; */
+  margin-top: 20px;
 }
 .calendar {
   width: 350px;
@@ -244,7 +209,6 @@ p {
   display: inline-block !important;
   cursor: pointer !important;
   color: #ffffff !important;
-  font-family: Roboto !important;
   font-size: 20px !important;
   font-weight: bold !important;
   padding: 10px 25px !important;
@@ -262,7 +226,6 @@ p {
   display: inline-block !important;
   cursor: pointer !important;
   color: #ffffff !important;
-  font-family: Roboto !important;
   font-size: 20px !important;
   font-weight: bold !important;
   padding: 10px 25px !important;
@@ -279,12 +242,10 @@ p {
 }
 
 .modal-title {
-  font-family: Roboto !important;
   font-size: 20px !important;
 }
 
 .modal-body {
-  font-family: Roboto !important;
   font-size: 16px !important;
 }
 #main {
@@ -336,8 +297,6 @@ div.table {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
 
-  font-family: Roboto;
-  font-style: normal;
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
@@ -376,8 +335,6 @@ div.table {
 
   box-sizing: border-box;
 
-  font-family: Roboto;
-  font-style: normal;
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
@@ -406,8 +363,7 @@ div.table {
   /* Gray/01 */
   background: #f6f6f6;
   border-radius: 8px;
-  font-family: Roboto;
-  font-style: normal;
+
   font-size: 15px;
   line-height: 15px;
   padding: 5px;
@@ -425,8 +381,6 @@ div.table {
   background: #f6f6f6;
   border-radius: 8px;
 
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 35px;
@@ -453,8 +407,7 @@ div.table {
   font-size: 15px;
   height: 35px;
   width: auto;
-  font-family: Roboto;
-  font-style: normal;
+
   font-weight: bold;
   font-size: 20px;
   line-height: 35px;
@@ -524,8 +477,7 @@ div.end {
 .request-name,
 .item-name {
   padding-left: 8px;
-  font-family: Roboto;
-  font-style: normal;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
@@ -536,8 +488,7 @@ div.end {
   /* display: inline; */
   /* padding: 8px; */
   padding-left: 8px;
-  font-family: Roboto;
-  font-style: normal;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
@@ -545,4 +496,150 @@ div.end {
 
 .req-item {
   display: block;
+}
+
+/* Volunteer dashboard */
+a {
+  width: 37px;
+  height: 10px;
+  text-decoration: underline !important;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  color: #434d65 !important;
+  display: block !important;
+  text-align: left;
+}
+
+.body-icons {
+  position: center;
+  width: 47px;
+  height: 49px;
+  font-size: 100px;
+  left: 17px;
+  top: 56px;
+  bottom: 56px;
+  border-radius: 10px;
+}
+
+p {
+  width: 350px !important;
+  margin-top: 20px !important;
+}
+
+.icon-torso {
+  vertical-align: middle !important;
+}
+
+.back {
+  /* text-align: center !important;
+  top: 50px !important; */
+}
+
+#main {
+  border: 1px solid red;
+  width: 280px;
+  margin: 50px auto;
+}
+
+div.ex1 {
+  width: 200px;
+  position: relative;
+  height: 100px;
+}
+div.table {
+  width: 100%;
+}
+
+/* Volunteer Signup */
+.input {
+  height: 25px;
+  width: 200px;
+  flex: 0 0 200px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.input-email {
+  height: 25px;
+  width: 200px;
+  flex: 0 0 200px;
+  margin-left: 27px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.input-password {
+  height: 25px;
+  width: 200px;
+  flex: 0 0 200px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.input-age {
+  height: 25px;
+  flex: 0 0 200px;
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 80px;
+  margin-top: 5px;
+}
+
+.input-checkbox {
+  margin-right: 20px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #14203e !important;
+  border-radius: 26px !important;
+  border: 2px solid #14203e !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  padding: 10px 25px !important;
+  text-decoration: none !important;
+  text-shadow: 0px 1px 0px #14203e !important;
+}
+
+div.ex1 {
+  width: 200px;
+  position: relative;
+  height: 100px;
+}
+div.table {
+  width: 100%;
+}
+
+a {
+  width: 350px !important;
+  height: 20px !important;
+  text-decoration: underline !important;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  color: #434d65 !important;
+  display: block !important;
+}
+
+.a-class {
+  width: 350px !important;
+  height: 23px !important;
+  display: inline !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  line-height: 23px !important;
+
+  color: #000000 !important;
+}
+
+.input-radio {
+  margin-right: 20px;
 }

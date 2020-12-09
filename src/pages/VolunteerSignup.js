@@ -1,7 +1,5 @@
-import "../styles/App.css";
-import "../styles/VolunteerSignup.css";
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 export default function VolunteerSignup() {
   const history = useHistory();
@@ -16,13 +14,14 @@ export default function VolunteerSignup() {
       event.target.elements.copd.checked ||
       event.target.elements.asthma.checked
     ) {
-      alert("Volunteer Registration Denied!\n " +
-          "Sorry you are not eligible to be a volunteer in the COVID pandemic situation");
-      history.push("/");
+      alert(
+        'Volunteer Registration Denied!\n ' +
+          'Sorry you are not eligible to be a volunteer in the COVID pandemic situation'
+      );
+      history.push('/');
     } else {
-      alert("Volunteer Registration Successful!\n " +
-      "Welcome Aboard");
-      history.push("/volunteer-dashboard");
+      alert('Volunteer Registration Successful!\n ' + 'Welcome Aboard');
+      history.push('/volunteer-dashboard');
     }
     event.preventDefault();
   }
@@ -33,23 +32,33 @@ export default function VolunteerSignup() {
         <i
           className="icon-left-open back"
           onClick={() => {
-            history.push("/signup");
+            history.push('/signup');
           }}
         ></i>
       </div>
-      <div className="title">
-        <h1>Volunteer Sign Up</h1>
-      </div>
+      <div className="title">Volunteer Sign Up</div>
       <div className="body">
         <form onSubmit={handleSubmit}>
           <div>
-            First Name: <input type="text" name="firstname" className="input" required={true}/>
+            First Name:{' '}
+            <input
+              type="text"
+              name="firstname"
+              className="input"
+              required={true}
+            />
           </div>
           <div>
-            Last Name: <input type="text" name="lastname" className="input" required={true}/>
+            Last Name:{' '}
+            <input
+              type="text"
+              name="lastname"
+              className="input"
+              required={true}
+            />
           </div>
           <div>
-            Age:{" "}
+            Age:{' '}
             <input
               type="number"
               name="age"
@@ -129,10 +138,16 @@ export default function VolunteerSignup() {
           <br />
           <div>
             <div>
-              Username: <input type="text" name="username" className="input" required={true}/>
+              Username:{' '}
+              <input
+                type="text"
+                name="username"
+                className="input"
+                required={true}
+              />
             </div>
             <div>
-              Phone number:{" "}
+              Phone number:{' '}
               <input
                 type="tel"
                 name="phonenumber"

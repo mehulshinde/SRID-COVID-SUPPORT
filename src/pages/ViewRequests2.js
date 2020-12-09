@@ -1,4 +1,3 @@
-import "../styles/App.css";
 import Calendar from "../calendar/calendar2";
 
 export default function ViewRequests2() {
