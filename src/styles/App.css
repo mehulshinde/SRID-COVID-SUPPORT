@@ -74,16 +74,14 @@ p {
 }
 
 .back {
-  font-size: 15px;
+  font-size: 30px;
   float: left;
 }
 
 .logout {
   padding: 6px;
-  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  border: 1px solid #14203e;
   border-radius: 15px;
   color: #d5d5d8;
   background: #14203e;
@@ -508,9 +506,7 @@ a {
   display: block !important;
   text-align: left;
 }
-.back {
-  font-size: 30px !important;
-}
+
 .body-icons {
   position: center;
   width: 47px;
@@ -532,8 +528,8 @@ p {
 }
 
 .back {
-  text-align: center !important;
-  top: 50px !important;
+  /* text-align: center !important;
+  top: 50px !important; */
 }
 
 #main {

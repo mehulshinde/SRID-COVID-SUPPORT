@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function VolunteerSelection(props) {
   const [volunteers, setVolunteers] = useState();
@@ -8,10 +8,10 @@ export default function VolunteerSelection(props) {
 
   useEffect(() => {
     setVolunteers([
-      { name: "Caleb Jones" },
-      { name: "Bertram Gilfoyle" },
-      { name: "Walter White" },
-      { name: "John Watson" },
+      { name: 'Caleb Jones' },
+      { name: 'Bertram Gilfoyle' },
+      { name: 'Walter White' },
+      { name: 'John Watson' },
     ]);
   }, []);
 
@@ -34,32 +34,39 @@ export default function VolunteerSelection(props) {
       })
     );
 
-    alert("Your on-demand request has been submitted");
-    props.history.push("/user-home");
+    alert('Your on-demand request has been submitted');
+    props.history.push('/user-home');
   }
 
   return (
     <>
-      <h2 className="mt-4">Volunteer Selection</h2>
-      <div>Select a Nearby Volunteer</div>
-      {volunteers &&
-        volunteers.map((volunteer) => {
-          return (
-            <div
-              onClick={onClick}
-              key={volunteer.name}
-              style={{
-                backgroundColor: selected === volunteer.name ? "gray" : "white",
-              }}
-            >
-              {/* <span style={{ width: '20px' }}>Hello</span> */}
-              <span>{volunteer.name}</span>
-            </div>
-          );
-        })}
-      <Button type="submit" onClick={setVolunteer}>
-        Request
-      </Button>
+      <div className="title">Volunteer Selection</div>
+      <div className="body">
+        <h2>Select a Nearby Volunteer</h2>
+        {volunteers &&
+          volunteers.map((volunteer) => {
+            return (
+              <div
+                onClick={onClick}
+                key={volunteer.name}
+                className="py-3"
+                style={{
+                  backgroundColor:
+                    selected === volunteer.name ? 'white' : '#d6d5d8',
+                }}
+              >
+                <span style={{fontSize: '20px'}}>{volunteer.name}</span>
+              </div>
+            );
+          })}
+        <Button
+          type="submit"
+          onClick={setVolunteer}
+          style={{ float: 'right', marginTop: '20px' }}
+        >
+          Request
+        </Button>
+      </div>
     </>
   );
 }

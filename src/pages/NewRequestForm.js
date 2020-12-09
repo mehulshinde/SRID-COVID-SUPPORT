@@ -88,6 +88,7 @@ export default function NewRequestForm(props) {
               onChange={(e) => {
                 setDeliveryDate(e.target.value);
               }}
+              required
             />
           </Form.Group>
           <Form.Group>
@@ -109,7 +110,11 @@ export default function NewRequestForm(props) {
               </Col>
             </Form.Row>
           </Form.Group>
-          <Button type="submit" onClick={handleFindVolunteer}>
+          <Button
+            type="submit"
+            onClick={handleFindVolunteer}
+            style={{ float: 'right' }}
+          >
             Find Volunteer
           </Button>
         </Form>
