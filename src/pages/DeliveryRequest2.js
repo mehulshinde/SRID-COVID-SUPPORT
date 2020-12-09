@@ -12,7 +12,11 @@ export default function DeliveryRequest2() {
       ",I am about to get you your groceries for this week, you specified you need: Organic Milk - 1 gallon Yoghurt - 1 Do you want anything changed?",
   ];
 
-  const chat = { title: "Mary's Request", sent: sentMsg, received: [] };
+  const chat = {
+    title: requestFor + "'s Request",
+    sent: sentMsg,
+    received: [],
+  };
   const itemList = [
     { itemName: "Organic Milk", itemQty: 1 },
     { itemName: "Yogurt", itemQty: 1 },
@@ -60,7 +64,7 @@ export default function DeliveryRequest2() {
         ></i>
       </div>
       <div className="title">
-        <h2> {requestFor}'s Request</h2>
+        <h1> {requestFor}'s Request</h1>
         <p>07 Dec 2020 6 PM</p>
       </div>
       <div className="body">
@@ -109,14 +113,17 @@ export default function DeliveryRequest2() {
             <thead>
               <tr>
                 <th>
-                  <div className="library-fontello"  onClick={() => {
-              history.push({ pathname: "/chat", state: chat });
-            }}>
+                  <div
+                    className="library-fontello"
+                    onClick={() => {
+                      history.push({ pathname: "/chat", state: chat });
+                    }}
+                  >
                     <i class="icon-comment-alt"></i> Chat{" "}
                   </div>
                 </th>
-                <th> 
-                  <div className="library-fontello"  onClick={callAlert}>
+                <th>
+                  <div className="library-fontello" onClick={callAlert}>
                     <i class="icon-phone"></i> Call{" "}
                   </div>
                 </th>

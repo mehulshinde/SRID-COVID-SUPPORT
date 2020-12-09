@@ -58,9 +58,9 @@ export default function EditItems() {
               ></Form.Control>
             </Col>
             <Col xs="2">
-              <Button type="submit" onClick={handleAddItem}>
+              <button type="submit" onClick={handleAddItem}>
                 Add
-              </Button>
+              </button>
             </Col>
           </Form.Row>
         </Form>

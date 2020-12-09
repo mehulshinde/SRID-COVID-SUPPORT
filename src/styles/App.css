@@ -41,13 +41,13 @@ button:active {
 h1 {
   /* position: absolute; */
   width: 170px;
-  height: 35px;
+  /* height: 30px; */
 
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
-  line-height: 35px;
+  line-height: 30px;
 
   color: #000000;
 }
@@ -96,14 +96,14 @@ p {
 
 .back {
   /* display: flex; */
-  position: absolute;
-  width: 47px;
-  height: 49px;
+  position: absolute !important;
+  /* width: 47px; */
+  /* height: 49px; */
   font-size: 30px;
   left: 17px;
-  top: 56px;
-  border-radius: 8px;
-  vertical-align: middle;
+  margin-top: 5px;
+  /* border-radius: 8px; */
+  /* vertical-align: middle; */
 }
 
 .logout {
@@ -172,7 +172,7 @@ p {
   width: 60px;
   height: 60px;
 
-  /* background: #990909; */
+  background: #990909;
   border-radius: 8px;
 }
 
@@ -184,14 +184,20 @@ p {
   background-image: url("./paul.png");
 }
 
-.item-name {
-  width: 283px;
-  height: 29px;
-  margin-left: 10px;
+.default-picture {
+  background-image: url("./default.png");
+}
 
-  /* background: #f6f6f6; */
-  box-sizing: border-box;
-  border-radius: 8px;
+.milk {
+  background-image: url("./milk.png");
+}
+
+.yogurt {
+  background-image: url("./yogurt.png");
+}
+
+.orange {
+  background-image: url("./orange.png");
 }
 
 .quantity {
@@ -216,26 +222,17 @@ p {
   border-radius: 8px;
 }
 
-.item {
-  display: flex;
-  padding-top: 10px;
-  border-bottom: 2px solid #72798b;
-  /* -webkit-tap-highlight-color: #72798b; */
-  /* border-bottom: #14203e; */
-}
-
-.item:hover,
+/* .item:hover,
 .item:active {
   display: flex;
   padding-top: 10px;
   border-bottom: 2px solid #72798b;
-  /* border-bottom: #14203e; */
   background: #f6f6f6;
-}
+} */
 
-.subtext {
+/* .subtext {
   display: flex;
-}
+} */
 
 .btn-cancel,
 .btn-cancel:hover,
@@ -274,12 +271,11 @@ p {
 }
 
 .click-btn,
-.click-btn:hover{
+.click-btn:hover {
   background-color: #14203e;
   color: white;
   box-shadow: 3px 3px gray;
   margin-bottom: 10px;
-
 }
 
 .modal-title {
@@ -514,7 +510,8 @@ div.end {
   width: 50px;
 }
 
-.request-1-head {
+.request-1-head,
+.item {
   display: flex;
   margin-top: 8px;
   /* padding-top: 10px; */
@@ -524,7 +521,8 @@ div.end {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.request-name {
+.request-name,
+.item-name {
   padding-left: 8px;
   font-family: Roboto;
   font-style: normal;
@@ -533,7 +531,8 @@ div.end {
   line-height: 23px;
 }
 
-.request-time {
+.request-time,
+.subtext {
   /* display: inline; */
   /* padding: 8px; */
   padding-left: 8px;

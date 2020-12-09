@@ -30,7 +30,7 @@ export default function DeliveryRequest() {
         ></i>
       </div>
       <div className="title">
-        <h2> {requestFor}'s Request</h2>
+        <h1> {requestFor}'s Request</h1>
         <p>07 Dec 2020 6 PM</p>
       </div>
       <div className="body">

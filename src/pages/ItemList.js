@@ -16,13 +16,15 @@ export default function ItemList(props) {
   }
   return (
     <>
-      <div class="library-fontello">
-        <i
-          class="icon-left-open back"
-          onClick={() => {
-            props.history.push("/user-home");
-          }}
-        ></i>
+      <div class="back">
+        <div class="library-fontello">
+          <i
+            class="icon-left-open"
+            onClick={() => {
+              props.history.push("/user-home");
+            }}
+          ></i>
+        </div>
       </div>
       <div class="title">
         <h1>Item List</h1>
