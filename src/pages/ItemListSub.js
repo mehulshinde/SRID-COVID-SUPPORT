@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Item from './Item';
 
 export default function ItemList(props) {
   const [itemName, setItemName] = useState('');
@@ -10,7 +11,7 @@ export default function ItemList(props) {
   function handleAddItem(e) {
     e.preventDefault();
     console.log(e.target);
-    setItemList([...itemList, { name: itemName, qty: itemQty }]);
+    setItemList([...itemList, { itemName: itemName, itemQty: itemQty }]);
     setItemName('');
     setItemQty('');
   }
@@ -27,7 +28,7 @@ export default function ItemList(props) {
       <div class="title">Item List</div>
       <div class="body">
         <Form>
-          <Form.Row>
+          <Form.Row className="align-items-center">
             <Col xs="7">
               <Form.Control
                 type="text"
@@ -47,25 +48,25 @@ export default function ItemList(props) {
               ></Form.Control>
             </Col>
             <Col xs="2">
-              <Button type="submit" onClick={handleAddItem}>
-                Add
-              </Button>
+              <div class="library-fontello">
+                <i
+                  class="icon-plus-circled"
+                  style={{ fontSize: '30px' }}
+                  onClick={handleAddItem}
+                ></i>
+              </div>
             </Col>
           </Form.Row>
         </Form>
-        {itemList.length === 0 ? (
-          <div>Add items to your list</div>
-        ) : (
-          itemList.map((item) => (
-            <Row className="justify-content-around">
-              <span>{item.name}</span>
-              <span>{item.qty}</span>
-              <span>Remove</span>
-            </Row>
-          ))
-        )}
+        <div style={{ height: '70vh' }}>
+          {itemList.map((item) => (
+            <div>
+              <Item item={item}></Item>
+            </div>
+          ))}
+        </div>
         <Link to={{ pathname: '/subscribe', state: { itemList } }}>
-          <Button>Continue</Button>
+          <Button style={{ float: 'right' }}>Continue</Button>
         </Link>
       </div>
     </>
