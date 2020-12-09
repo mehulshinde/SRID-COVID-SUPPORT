@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function VolunteerSelection(props) {
   const [volunteers, setVolunteers] = useState();
@@ -8,10 +8,10 @@ export default function VolunteerSelection(props) {
 
   useEffect(() => {
     setVolunteers([
-      { name: 'Caleb Jones' },
-      { name: 'Bertram Gilfoyle' },
-      { name: 'Walter White' },
-      { name: 'John Watson' },
+      { name: "Caleb Jones", img: "picture caleb" },
+      { name: "Bertram Gilfoyle", img: "picture bertram" },
+      { name: "Walter White", img: "picture walter" },
+      { name: "John Watson", img: "picture john" },
     ]);
   }, []);
 
@@ -34,8 +34,8 @@ export default function VolunteerSelection(props) {
       })
     );
 
-    alert('Your on-demand request has been submitted');
-    props.history.push('/user-home');
+    alert("Your on-demand request has been submitted");
+    props.history.push("/user-home");
   }
 
   return (
@@ -52,10 +52,10 @@ export default function VolunteerSelection(props) {
                 key={volunteer.name}
                 style={{
                   backgroundColor:
-                    selected === volunteer.name ? 'white' : '#d6d5d8',
+                    selected === volunteer.name ? "white" : "#d6d5d8",
                 }}
               >
-                <div class="picture profile"></div>
+                <div class={volunteer.img}></div>
                 <div class="req-item">
                   <div class="request-name">{volunteer.name}</div>
                 </div>
@@ -65,7 +65,7 @@ export default function VolunteerSelection(props) {
         <Button
           type="submit"
           onClick={setVolunteer}
-          style={{ float: 'right', marginTop: '20px' }}
+          style={{ float: "right", marginTop: "20px" }}
         >
           Request
         </Button>

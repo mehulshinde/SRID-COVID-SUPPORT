@@ -1,7 +1,7 @@
 body {
   background: #d5d5d8;
   background-image: url("../logo_light.png");
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .container {
@@ -137,6 +137,22 @@ p {
 
   background: #990909;
   border-radius: 8px;
+}
+
+.walter {
+  background-image: url("./walter.png");
+}
+
+.john {
+  background-image: url("./john.png");
+}
+
+.bertram {
+  background-image: url("./bertram.png");
+}
+
+.caleb {
+  background-image: url("./caleb.png");
 }
 
 .profile {
